@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Login } from "./pages/Login";
-import { Signup } from "./pages/Signup";
+import { Home } from "./pages/Home/Home.js";
+import { Login } from "./pages/Login/Login.js";
+import { Signup } from "./pages/Signup/Signup.js";
 import { AuthContextComponent } from "./contexts/authContext";
-import { Profile } from "./pages/Profile";
-import { ErrorPage } from "./pages/ErrorPage";
+import { Profile } from "./pages/Profile/Profile.js";
+import { ErrorPage } from "./pages/ErrorPage/ErrorPage";
 
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
