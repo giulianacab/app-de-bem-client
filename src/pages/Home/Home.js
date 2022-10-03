@@ -1,13 +1,14 @@
 import { FaceRetouchingNaturalRounded } from "@mui/icons-material";
 import { useReducer } from "react";
-import { PaytoneOne-Regular } from "../../Fonts/PaytoneOne-Regular.ttf";
+// import { PaytoneOne-Regular } from "../../Fonts/PaytoneOne-Regular.ttf";
+import Menu from "../../components/Menu";
 
 
 export function Home() {
   return <>
 
     {/* HEADER */}
-    <Header />
+    {/* <Header /> */}
     <h1>Olá, ${/*como coloca user first name?*/}</h1>
 
     {/* SELECT MOOD */}
