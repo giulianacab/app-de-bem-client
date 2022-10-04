@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../../contexts/authContext";
 import { api } from "../../api/api";
 import { useNavigate } from "react-router-dom";
+import style from "./login.module.css"
 
 export function Login() {
   const [form, setForm] = useState({
@@ -48,7 +49,7 @@ export function Login() {
         value={form.password}
         onChange={handleChange}
       />
-      <button type="submit">Entrar!</button>
+      <button type="submit" className={`btn btn-primary ${style.primary}`} style={{width:"7rem", margin:"1rem"}}>Entrar!</button>
     </form>
   );
 }

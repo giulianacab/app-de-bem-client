@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { api } from "../../api/api";
 import { useNavigate } from "react-router-dom";
+import style from "./signup.module.css"
 
 export function Signup() {
   const navigate = useNavigate();
@@ -84,7 +85,7 @@ export function Signup() {
         value={form.confirmPassword}
         onChange={handleChange}
       />
-      <button type="submit">Cadastrar</button>
+      <button type="submit" className={`btn btn-primary ${style.primary}`} style={{width:"7rem", margin:"1rem"}}>Cadastrar</button>
     </form>
   );
 }

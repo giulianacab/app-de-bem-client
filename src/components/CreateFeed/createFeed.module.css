@@ -1,3 +1,17 @@
 .title{
-    
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.message {
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.primary:hover{
+    cursor: pointer;
+    box-shadow: 0 0.2rem 1.3rem 0 rgb(128, 62, 0);
+    transition: transform 150ms;
+    transform: scale(1.02);
 }
