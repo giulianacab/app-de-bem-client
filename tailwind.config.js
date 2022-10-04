@@ -8,6 +8,7 @@ module.exports = {
       'orange': '#FF6648',
       'pink': '#FF94AE',
       'purple': 'A706CE',
+      'white': '#ffffff',
     },
     fontFamily: {
       sans: ['Paytone']
