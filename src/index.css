@@ -5,40 +5,32 @@
 
 @layer components{
     /* HEADER */
-    header{
+    .header{
         @apply
         bg-[#FF6648]
-        h-96
+        h-40
         w-full
-        m-0
-        flex-auto
-        box-border h-40 w-40
+        box-border
     }
     
-    .avatar{
+    .infosHeader{
         @apply
-        flex-auto
-        w-52
+        w-4/5
+        flex
+        flex-col
+    }
+
+    /* .avatar{
+        @apply
     }
 
     .titleHome{
         @apply
-        flex-auto
-        w-96
     }
 
     .configIcon{
-        @apply            
-        flex-auto
-        w-52
-
-        bg-[purple]
-
-        rounded-xl
-        border-solid
-        border-[purple]
-        border
-    }
+        @apply
+    } */
 
 
 
@@ -61,6 +53,8 @@
         font-sans
         text-[#000000]
         text-xl
+
+        py-8
     }
 
     .chooseMood{
@@ -128,7 +122,7 @@
     }
 
 
-=======
+/* LOGIN E SIGN UP PAGES */
 
     .button{
         @apply
