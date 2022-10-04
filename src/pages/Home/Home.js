@@ -9,7 +9,9 @@ export function Home() {
 
     {/* HEADER */}
     {/* <Header /> */}
-      <Header />
+      <header className="header">
+        <Header />
+      </header>
 
       {/* SELECT MOOD */}
       <div className="moodToday">
