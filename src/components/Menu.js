@@ -1,22 +1,25 @@
 // 6 ícones: home, my moods, profile, telefone (sos), papo privado, programas
-import IconButton from '@mui/material/IconButton';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { ReactDOM } from "react";
+import { useRoutes } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import PersonIcon from '@mui/icons-material/Person';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import ForumIcon from '@mui/icons-material/Forum';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
-import style from "./menu.style.css";
+import "../index.css";
 
 
 export default function Menu() {
     <>
-    <footer>
-
 
     {/* HOME */}
         <Link to={"/"}>
-            <div className={style.homeIcon}>
+            <div className="homeIcon">
                 <HomeIcon
                     fontSize="large"
                     color="white"
@@ -27,7 +30,7 @@ export default function Menu() {
 
     {/* MY MOODS */}
         <Link to={"/mymoods"}>
-            <div className={style.myMoodsIcon}>
+            <div className="myMoodsIcon">
                 <EmojiEmotionsIcon
                     fontSize="large"
                     color="white"
@@ -38,7 +41,7 @@ export default function Menu() {
 
     {/* PROFILE */}
         <Link to={"/profile"}>
-            <div className={style.profileIcon}>
+            <div className="profileIcon">
                 <PersonIcon
                     fontSize="large"
                     color="white"
@@ -49,7 +52,7 @@ export default function Menu() {
 
     {/* SOS */}
         <Link to={"/errorpage"}>
-            <div className={style.errorIcon}>
+            <div className="errorIcon">
                 <LocalPhoneIcon
                     fontSize="large"
                     color="white"
@@ -60,7 +63,7 @@ export default function Menu() {
 
     {/* COMMUNITIES */}
         <Link to={"/communities"}>
-            <div className={style.communitiesIcon}>
+            <div className="communitiesIcon">
                 <ForumIcon
                     fontSize="large"
                     color="white"
@@ -68,12 +71,12 @@ export default function Menu() {
             </div>
         </Link>
 
-        //Comuniddade específica: /idCommunity
+        {/* Comuniddade específica: /idCommunity */}
 
 
     {/* PROGRAMS */}
         <Link to={"/errorpage"}>
-            <div className={style.errorIcon}>
+            <div className="errorIcon">
                 <VideoLibraryIcon
                     fontSize="large"
                     color="white"
@@ -81,7 +84,5 @@ export default function Menu() {
             </div>
         </Link>
 
-
-    </footer>
     </>
 };

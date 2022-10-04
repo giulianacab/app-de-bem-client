@@ -85,7 +85,7 @@ export function Signup() {
         value={form.confirmPassword}
         onChange={handleChange}
       />
-      <button type="submit" className={`btn btn-primary ${style.primary}`} style={{width:"7rem", margin:"1rem"}}>Cadastrar</button>
+      <button type="submit" className={`btn btn-primary $"primary}`} style={{width:"7rem", margin:"1rem"}}>Cadastrar</button>
     </form>
   );
 }

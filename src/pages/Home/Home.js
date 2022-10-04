@@ -1,28 +1,37 @@
-import { FaceRetouchingNaturalRounded } from "@mui/icons-material";
-import { useReducer } from "react";
 // import { PaytoneOne-Regular } from "../../Fonts/PaytoneOne-Regular.ttf";
 import Menu from "../../components/Menu";
+import Header from "../../components/Header";
 
 
 export function Home() {
-  return <>
+  return (
+    <>
 
     {/* HEADER */}
     {/* <Header /> */}
-    <h1>Olá, ${/*como coloca user first name?*/}</h1>
+      <Header />
 
-    {/* SELECT MOOD */}
-    <h3>Como você está hoje?</h3>
+      {/* SELECT MOOD */}
+      <div className="moodToday">
+          <h3>Como você está hoje?</h3>
+      </div>
 
-    {/* MY PROGRESS */}
-    <h4>MEU PROGRESSO</h4>
+      {/* MY PROGRESS */}
+      <div className="myProgress">
+        <h4>MEU PROGRESSO</h4>
+      </div>
 
-    {/* RANDOM SUGGESTION OF A COMMUNITY */}
-    <h4>TALVEZ VOCÊ GOSTE</h4>
+      {/* RANDOM SUGGESTION OF A COMMUNITY */}
+      <div className="suggestionCommunity">
+        <h4>TALVEZ VOCÊ GOSTE</h4>
+      </div>
+
 
     {/* MENU */}
-    <Menu />
+    <div className="footer">
+      <Menu />
+    </div>
 
-  
-  </>;
+    </>
+  )
 }
