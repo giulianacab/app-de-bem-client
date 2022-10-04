@@ -33,4 +33,12 @@
         border-[purple]
         border
     }
+
+    .button{
+        @apply
+        bg-[pink]
+    }
+
+   
+    
 }
