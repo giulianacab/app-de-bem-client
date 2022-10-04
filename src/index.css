@@ -126,4 +126,12 @@
         mx-10
     }
 
+
+    .button{
+        @apply
+        bg-[pink]
+    }
+
+   
+    
 }
