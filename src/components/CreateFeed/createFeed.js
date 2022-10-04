@@ -30,7 +30,7 @@ export default function AddForm () {
     
     return (
         <center>
-        <form onSubmit={handleSubmit} className="grid}>
+        <form onSubmit={handleSubmit} className="grid">
             <label htmlFor="title">Title:</label>
             <input 
                 id="title"
