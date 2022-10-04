@@ -9,21 +9,31 @@ export function Home() {
 
     {/* HEADER */}
     {/* <Header /> */}
-      <Header />
+      <header className="header">
+        <Header />
+      </header>
 
       {/* SELECT MOOD */}
       <div className="moodToday">
-          <h3>Como você está hoje?</h3>
+          <h3 className="titleMoodToday">Como você está hoje?</h3>
+          <div className="chooseMood">
+            <img src="https://svgshare.com/i/n9W.svg" className="benzinha1" alt="triste"></img>
+            <img src="https://svgshare.com/i/n9i.svg" className="benzinha2" alt="apática"></img>
+            <img src="https://svgshare.com/i/n86.svg" className="benzinha3" alt="de bem"></img>
+            <img src="https://svgshare.com/i/n7M.svg" className="benzinha4" alt="ansiosa"></img>
+            <img src="https://svgshare.com/i/n8e.svg" className="benzinha5" alt="cara de raiva
+            "></img>
+          </div>
       </div>
 
       {/* MY PROGRESS */}
       <div className="myProgress">
-        <h4>MEU PROGRESSO</h4>
+        <h4 className="titleMyProgress">MEU PROGRESSO</h4>
       </div>
 
       {/* RANDOM SUGGESTION OF A COMMUNITY */}
       <div className="suggestionCommunity">
-        <h4>TALVEZ VOCÊ GOSTE</h4>
+        <h4 className="titleSuggCommunity">TALVEZ VOCÊ GOSTE</h4>
       </div>
 
 

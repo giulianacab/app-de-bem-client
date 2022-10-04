@@ -2,37 +2,127 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer components{
-    header{
+    /* HEADER */
+    .header{
         @apply
         bg-[#FF6648]
-        h-96
-        w-[100vw]
-        m-0
+        h-40
+        w-full
+        box-border
     }
     
-    .avatar{
+    .infosHeader{
         @apply
-        flex-auto
-        w-52
+        w-4/5
+        flex
+        flex-col
+    }
+
+    /* .avatar{
+        @apply
     }
 
     .titleHome{
         @apply
-        flex-auto
-        w-96
     }
 
     .configIcon{
-        @apply            
-        flex-auto
-        w-52
-        bg-[purple]
+        @apply
+    } */
+
+
+
+
+    /* HOME */
+    .moodToday{
+        @apply
+        bg-[white]
+
+        flex
+        flex-col
+        items-center
+        w-full
+        h-40
+        box-border
+    }
+
+    .titleMoodToday{
+        @apply
+        font-sans
+        text-[#000000]
+        text-xl
+
+        py-8
+    }
+
+    .chooseMood{
+        @apply
+        flex
+        flex-row
+        items-center
+        justify-evenly
+        w-4/5
+        h-40
+        box-border
+
+    }
+
+    .benzinha1, .benzinha2, .benzinha3, .benzinha4, .benzinha5{
+        @apply
+        w-12
+    }
+
+    .myProgress{
+        @apply
+        bg-[#A706CE]
+        flex
+        flex-row
+
+        items-center
+        w-4/5
+        h-40
+        box-border
+
         rounded-xl
         border-solid
-        border-[purple]
+        border-[#A706CE]
         border
+
+        m-10
     }
+
+    .suggestionCommunity{
+        @apply
+        bg-[#A706CE]
+        flex
+        flex-row
+        
+        items-center
+        w-4/5
+        h-40
+        box-border
+
+        rounded-xl
+        border-solid
+        border-[#A706CE]
+        border
+
+        m-10
+    }
+
+    .titleMyProgress, .titleSuggCommunity{
+        @apply
+        font-sans
+        text-white
+        text-base
+
+        mx-10
+    }
+
+
+/* LOGIN E SIGN UP PAGES */
 
     .button{
         @apply
