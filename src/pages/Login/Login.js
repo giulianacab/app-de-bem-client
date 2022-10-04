@@ -49,7 +49,7 @@ export function Login() {
         value={form.password}
         onChange={handleChange}
       />
-      <button type="submit" className={`btn btn-primary ${style.primary}`} style={{width:"7rem", margin:"1rem"}}>Entrar!</button>
+      <button type="submit" className={`btn btn-primary $"primary}`} style={{width:"7rem", margin:"1rem"}}>Entrar!</button>
     </form>
   );
 }

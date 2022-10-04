@@ -30,7 +30,7 @@ export default function AddForm () {
     
     return (
         <center>
-        <form onSubmit={handleSubmit} className={style.grid}>
+        <form onSubmit={handleSubmit} className="grid}>
             <label htmlFor="title">Title:</label>
             <input 
                 id="title"
@@ -50,7 +50,7 @@ export default function AddForm () {
                 required
             />
             
-            <center><button type="submit" className={`btn btn-primary ${style.primary}`} style={{width:"7rem", margin:"1rem"}}>Enviar</button></center>
+            <center><button type="submit" className={`btn btn-primary $"primary}`} style={{width:"7rem", margin:"1rem"}}>Enviar</button></center>
         </form>
      </center>
     );
