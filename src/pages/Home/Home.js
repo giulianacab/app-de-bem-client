@@ -12,11 +12,15 @@ export function Home() {
     {/* HEADER */}
     <header className="header">
       <div className="divHeader">
+        <Link to ="/profile">
         <img src="https://images2.imgbox.com/54/1f/hdwOJPTU_o.png" className="avatar" alt ="default avatar" />
+        </Link>
         <h1 className="titleHome">
             Olá, FirstName!
         </h1>
-        <img src="https://svgshare.com/i/nAs.svg" className="configIcon" alt="config icon" />
+        <Link to ="/profile">
+          <img src="https://svgshare.com/i/nAs.svg" className="configIcon" alt="config icon" />
+        </Link>
       </div>
     </header>
 
