@@ -39,8 +39,7 @@ export function Signup() {
     e.preventDefault();
 
     try {
-      const imgURL = await handleUpload();
-      await api.post("/users/signup", { ...form, avatar: imgURL });
+      await api.post("/users/signup", form);
 
       navigate("/login");
     } catch (error) {
@@ -150,7 +149,7 @@ export function Signup() {
 
             <div>
               <button
-                type="signup"
+                type="submit"
                 className="group relative flex w-full justify-center rounded-md border border-transparent bg-pink py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -160,14 +159,14 @@ export function Signup() {
             
             </div>
           </form>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
           
           
         </div>

@@ -99,16 +99,16 @@ export function Login() {
               </button>
             </div>
           </form>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
+          <p className="text-[#FF6648]">.</p>
         </div>
         
       </div>
