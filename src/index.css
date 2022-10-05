@@ -98,6 +98,7 @@
         font-sans
         text-[#ffffff]
         text-2xl
+        font-bold
         
     }
 
@@ -203,7 +204,115 @@
         bg-[#FF94AE]
     }
 
-   
+
+
+/* MY MOODS PAGE */
+    .divTitlePageMoodFeed{
+        @apply
+        -my-8
+        w-full
+        h-14
+        flex
+        justify-center
+        items-center
+        fixed
+        bg-pink
+    }
+
+    .txtTitlePageMoodFeed{
+        @apply
+        text-[#ffffff]
+        text-2xl
+        font-bold
+        text-center
+    }
+
+    .moodFeed{
+        @apply
+        my-40
+        ml-10
+        w-4/5
+        flex
+        flex-col
+        justify-center
+        items-center
+    }
+
+    .boxMoodFeed{
+        @apply
+        overflow-y-scroll
+        flex
+        flex-row
+        w-full
+        justify-center
+        items-center
+        my-6
+    }
+
+    .textsMoodFeed{
+        @apply
+        flex
+        flex-col
+    }
+
+    .imgHumorMoodFeed{
+        @apply
+        m-5
+        flex
+        flex-col
+        justify-center
+        items-center
+    }
+    .benzinhaOfThisDay{
+        @apply
+        w-14
+    }
+
+    .dateMoodFeed{
+        @apply
+        my-3
+    }
+
+    .dateTxtMoodFeed{
+        @apply
+        text-sm
+    }
+
+    .nameHumorMoodFeed{}
+
+    .nameTxtHumorMoodFeed{
+        @apply
+        text-lg
+        font-bold
+    }
+
+    .msgHumorMoodFeed{
+        @apply
+        my-3
+    }
+
+    .msgTxtHumorMoodFeed{
+        @apply
+        text-sm
+    }
+
+
+
+
+/* PROFILE */
+    .editInfos{
+        @apply
+        my-40
+        ml-10
+        w-4/5
+        flex
+        flex-col
+        justify-start
+        items-start
+    }
+
+
+
 
 
 /* MENU / FOOTER */
