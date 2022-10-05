@@ -59,7 +59,7 @@ export function Signup() {
             </h2>
            
           </div>
-          <form className="mt-8 space-y-6" action="#" method="POST">
+          
             
             <div className="-space-y-px rounded-md shadow-sm">
               <div>
@@ -158,7 +158,7 @@ export function Signup() {
               </button>
             
             </div>
-          </form>
+          
           <p className="text-[#FF6648]">.</p>
           <p className="text-[#FF6648]">.</p>
           <p className="text-[#FF6648]">.</p>
