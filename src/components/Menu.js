@@ -17,7 +17,7 @@ import "../index.css";
 export default function Menu() {
     <>
 
-    {/* HOME */}
+{/*     
         <Link to={"/"}>
             <div className="homeIcon">
 
@@ -25,7 +25,7 @@ export default function Menu() {
         </Link>
 
 
-    {/* MY MOODS */}
+    
         <Link to={"/mymoods"}>
             <div className="myMoodsIcon">
 
@@ -33,7 +33,7 @@ export default function Menu() {
         </Link>
 
 
-    {/* PROFILE */}
+    
         <Link to={"/profile"}>
             <div className="profileIcon">
 
@@ -41,7 +41,7 @@ export default function Menu() {
         </Link>
 
 
-    {/* SOS */}
+    
         <Link to={"/errorpage"}>
             <div className="errorIcon">
 
@@ -49,22 +49,21 @@ export default function Menu() {
         </Link>
 
 
-    {/* COMMUNITIES */}
+    
         <Link to={"/communities"}>
             <div className="communitiesIcon">
 
             </div>
         </Link>
 
-        {/* Comuniddade específica: /idCommunity */}
 
 
-    {/* PROGRAMS */}
+    
         <Link to={"/errorpage"}>
             <div className="errorIcon">
 
             </div>
-        </Link>
+        </Link> */}
 
     </>
 };
