@@ -10,27 +10,35 @@
         bg-[#FF6648]
         h-40
         w-full
-        box-border
-    }
-    
-    .infosHeader{
-        @apply
-        w-4/5
         flex
         flex-col
     }
 
-    /* .avatar{
+    .avatar{
         @apply
+        w-10
+        flex
+        flex-col
     }
 
     .titleHome{
         @apply
+        font-sans
+        text-[#000000]
+        text-xl
+
+        py-8
+
+        flex
+        flex-col
     }
 
     .configIcon{
         @apply
-    } */
+        w-10
+        flex
+        flex-col
+    }
 
 
 
