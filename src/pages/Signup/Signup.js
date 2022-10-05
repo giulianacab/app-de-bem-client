@@ -59,7 +59,7 @@ export function Signup() {
             </h2>
            
           </div>
-          <form className="mt-8 space-y-6" action="#" method="POST">
+          
             
             <div className="-space-y-px rounded-md shadow-sm">
               <div>
@@ -128,14 +128,18 @@ export function Signup() {
                 />
               </div>
               <div>
-                <label htmlFor="confirm-password" className="sr-only">
+                <label htmlFor="confirmPassword" className="sr-only">
                   Senha
                 </label>
                 <input
                   id="confirmPassword"
                   name="confirmPassword"
                   type="password"
+<<<<<<< HEAD
                   autoComplete="confirm-password"
+=======
+                  autoComplete="confirmPassword"
+>>>>>>> 8c09c2ffde0f7a7741edd507028f02a007aa0293
                   required
                   className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                   placeholder="Confirmar Senha"
@@ -158,19 +162,11 @@ export function Signup() {
               </button>
             
             </div>
-          </form>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
-          <p>.</p>
+          
           
           
         </div>
       </div>
-      </form>
+    </form>
   );
 }
