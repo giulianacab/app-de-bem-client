@@ -1,16 +1,20 @@
-// import { PaytoneOne-Regular } from "../../Fonts/PaytoneOne-Regular.ttf";
-// import Menu from "../../components/Menu";
-// import Header from "../../components/Header";
-import { Link } from "react-router-dom";
 
+import { Header } from "../../components/Header/Header";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/authContext";
+import { useContext } from "react";
 
 
 export function Home() {
+  const { loggedInUser } = useContext(AuthContext);
+  let welcome = "Bem-vinda,"
+  if(loggedInUser.user.role !== "USERFEM") welcome = "Bem-vinde,"
+
   return (
     <>
-
+      <Header where={welcome} name={loggedInUser.user.name} />
     {/* HEADER */}
-    <header className="header">
+    {/* <header className="header">
       <div className="divHeader">
         <Link to ="/profile">
         <img src="https://images2.imgbox.com/54/1f/hdwOJPTU_o.png" className="avatar" alt ="default avatar" />
@@ -22,7 +26,7 @@ export function Home() {
           <img src="https://svgshare.com/i/nAs.svg" className="configIcon" alt="config icon" />
         </Link>
       </div>
-    </header>
+    </header> */}
 
 
 
