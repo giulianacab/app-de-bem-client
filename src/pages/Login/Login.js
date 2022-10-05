@@ -17,7 +17,7 @@ export function Login() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  async function handleSumit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     try {
@@ -34,7 +34,7 @@ export function Login() {
 
   return (
    
-    <form onSubmit={handleSumit}>
+    <form onSubmit={handleSubmit}>
     <div className="flex min-h-full bg-orange items-center w-screen h-screen justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
           <div>
