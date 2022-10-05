@@ -37,7 +37,7 @@ export function Profile() {
                 PÁGINA SELECIONADA
             </h3>
             <h1 className="nameHeaderPages">
-            {loggedInUser.user.name}
+              {loggedInUser.user.name}
             </h1>
         </div>
         <Link to ="/profile">
@@ -73,10 +73,7 @@ export function Profile() {
         <h4 className="newEmail">Nova senha:</h4>
       </div>
 
-    </div>
-
-
-
+    
 
     {/* BUTTONS */}
     <button className="buttonUpdateInfo">
@@ -87,6 +84,8 @@ export function Profile() {
     <button onClick={handleLogOut} className="buttonLogOut">
       Sair
     </button>
+    
+    </div>
 
 
 
