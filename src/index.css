@@ -4,7 +4,7 @@
 
 
 @layer components{
-    /* HEADER */
+    /* HEADER HOME (ONLY) */
     .header{
         @apply
         bg-[#FF6648]
@@ -21,6 +21,10 @@
     .divHeader{
         @apply
         w-4/5
+        flex
+        flex-row
+        justify-evenly
+        items-center
     }
 
     .avatar{
@@ -30,6 +34,66 @@
     }
 
     .titleHome{
+        @apply
+        font-sans
+        text-[#ffffff]
+        text-3xl
+        
+    }
+
+    .configIcon{
+        @apply
+        w-10
+    }
+
+
+
+    /* HEADER PAGES */
+    .headerPages{
+        @apply
+        bg-[#FF6648]
+        h-32
+        w-full
+        flex
+        flex-row
+        justify-evenly
+        items-center
+        fixed
+        top-0
+    }
+
+    .divHeaderPages{
+        @apply
+        w-4/5
+        flex
+        flex-row
+        justify-evenly
+        items-center
+    }
+
+    .avatar{
+        @apply
+        w-10
+        h-10
+    }
+
+    .textHeaderPages{
+        @apply
+        flex
+        flex-col
+        justify-evenly
+        items-center
+    }
+
+    .titleHeaderPages{
+        @apply
+        font-sans
+        text-[#ffffff]
+        text-xl
+        
+    }
+
+    .nameHeaderPages{
         @apply
         font-sans
         text-[#ffffff]

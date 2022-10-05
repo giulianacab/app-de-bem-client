@@ -40,7 +40,7 @@ export function Signup() {
 
     try {
       const imgURL = await handleUpload();
-      await api.post("/users/signup", { ...form, img: imgURL });
+      await api.post("/users/signup", { ...form, avatar: imgURL });
 
       navigate("/login");
     } catch (error) {
@@ -129,14 +129,14 @@ export function Signup() {
                 />
               </div>
               <div>
-                <label htmlFor="confirm-password" className="sr-only">
+                <label htmlFor="confirmPassword" className="sr-only">
                   Senha
                 </label>
                 <input
-                  id="confirm-password"
-                  name="confirm-password"
-                  type="confirm-password"
-                  autoComplete="confirm-password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  autoComplete="confirmPassword"
                   required
                   className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                   placeholder="Confirmar Senha"
