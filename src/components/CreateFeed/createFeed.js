@@ -1,8 +1,12 @@
 import { useState } from "react";
-import axios from "axios";
+import { useParams } from "react-router-dom";
+import { api } from "../../api/api";
 import style from "./createFeed.module.css"
 
 export default function AddForm () {
+
+    const { idCommunity } = useParams();
+
     const [form, setForm] = useState({
         title: "",
         message: "",
@@ -17,11 +21,7 @@ export default function AddForm () {
         e.preventDefault();
     
         try {
-          const response = await axios.post(
-            "",
-            form
-          );
-          ;
+          const response = await api.post(`/feeds/${idCommunity}`, form);
         } catch (err) {
           console.log(err);
         }
