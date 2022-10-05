@@ -32,9 +32,9 @@ export function MyMoods(){
         <Header where="My Moods" name={loggedInUser.user.name} />
 
         {/* TITLE MOOD FEED */}
-        <div className={`divTitlePageMoodFeed ${style.myMoodsHeader}`}>
+        {/* <div className={`divTitlePageMoodFeed ${style.myMoodsHeader}`}>
             <h1 className="txtTitlePageMoodFeed">Meu histórico de humor:</h1>
-        </div>
+        </div> */}
 
         {/* MOOD FEED */}
         <div className={`moodFeed ${style.moods}`}>
