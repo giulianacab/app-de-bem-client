@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { api } from "../../api/api";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import style from "./Signup.module.css"
 
 export function Signup() {
   const navigate = useNavigate();
@@ -54,9 +56,17 @@ export function Signup() {
         <div className="w-full max-w-md space-y-8">
           <div>
   
-            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-              Cadastre-se
+            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900" style={{color:"white"}}>
+              Faça seu cadastro
             </h2>
+            <p className="mt-2 text-center text-sm text-gray-600" style={{color:"white"}}>
+              Já é usuário?{' '}
+              <Link to="/login">
+                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500" style={{color:"#FFD110"}}>
+                  Entre na sua conta
+                </a>
+              </Link>
+            </p>
            
           </div>
           
@@ -150,7 +160,7 @@ export function Signup() {
             <div>
               <button
                 type="submit"
-                className="group relative flex w-full h-14 justify-center items-center rounded-3xl border border-transparent bg-pink py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className={`${style.bttnhover} group relative flex w-full h-14 justify-center items-center rounded-2xl border border-pink bg-pink py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`}
               >
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                 </span>
