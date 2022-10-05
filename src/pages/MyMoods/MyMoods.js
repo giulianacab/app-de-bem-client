@@ -10,7 +10,7 @@ export function MyMoods(){
             <img src="https://images2.imgbox.com/54/1f/hdwOJPTU_o.png" className="avatar" alt ="default avatar" />
             <div className="textHeaderPages">
                 <h3 className="titleHeaderPages">
-                    NOME DA PÁGINA SELECIONADA
+                    PÁGINA SELECIONADA
                 </h3>
                 <h1 className="nameHeaderPages">
                     FirstName LastName
