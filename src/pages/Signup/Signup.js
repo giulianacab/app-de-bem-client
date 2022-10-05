@@ -2,11 +2,11 @@ import { useState } from "react";
 import { api } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 
-
 export function Signup() {
   const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
+    username: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -49,43 +49,129 @@ export function Signup() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="formName">Nome:</label>
-      <input
-        id="formName"
-        name="name"
-        type="text"
-        value={form.name}
-        onChange={handleChange}
-      />
-      <label htmlFor="formImg">Sua foto de perfil:</label>
-      <input type="file" id="formImg" onChange={handleImage} />
+    
+    <form onSubmit={handleSubmit} className=" bg-orange">
+    <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-md space-y-8">
+          <div>
+  
+            <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+              Cadastre-se
+            </h2>
+           
+          </div>
+          <form className="mt-8 space-y-6" action="#" method="POST">
+            
+            <div className="-space-y-px rounded-md shadow-sm">
+              <div>
+                <label htmlFor="name" className="sr-only">
+                  name
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="name"
+                  autoComplete="name"
+                  required
+                  className="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  placeholder="nome"
+                  value={form.name}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="username" className="sr-only">
+                  Username
+                </label>
+                <input
+                  id="username"
+                  name="username"
+                  type="username"
+                  autoComplete="username"
+                  required
+                  className="relative block w-full appearance-none  border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  placeholder="Usuario"
+                  value={form.username}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="email-address" className="sr-only">
+                  Endereço de e-mail
+                </label>
+                <input
+                  id="email-address"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className="relative block w-full appearance-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  placeholder="e-mail"
+                  value={form.email}
+                  onChange={handleChange}
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="password" className="sr-only">
+                  Senha
+                </label>
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autoComplete="current-password"
+                  required
+                  className="relative block w-full appearance-none  border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  placeholder="Senha"
+                  value={form.password}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="confirm-password" className="sr-only">
+                  Senha
+                </label>
+                <input
+                  id="confirm-password"
+                  name="confirm-password"
+                  type="confirm-password"
+                  autoComplete="confirm-password"
+                  required
+                  className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  placeholder="Confirmar Senha"
+                  value={form.confirmPassword}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
 
-      <label htmlFor="formEmail">E-mail:</label>
-      <input
-        id="formEmail"
-        name="email"
-        type="email"
-        value={form.email}
-        onChange={handleChange}
-      />
-      <label htmlFor="formPassword">Senha:</label>
-      <input
-        id="formPassword"
-        name="password"
-        type="password"
-        value={form.password}
-        onChange={handleChange}
-      />
-      <label htmlFor="formConfirmPassword">Confirmação de senha</label>
-      <input
-        id="formConfirmPassword"
-        type="password"
-        name="confirmPassword"
-        value={form.confirmPassword}
-        onChange={handleChange}
-      />
-      <button type="submit" className={`btn btn-primary $"primary}`} style={{width:"7rem", margin:"1rem"}}>Cadastrar</button>
-    </form>
+
+
+            <div>
+              <button
+                type="signup"
+                className="group relative flex w-full justify-center rounded-md border border-transparent bg-pink py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+                </span>
+                Cadastrar
+              </button>
+            
+            </div>
+          </form>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          <p>.</p>
+          
+          
+        </div>
+      </div>
+      </form>
   );
 }
