@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import style from "./createFeed.module.css"
 
-export default function AddForm () {
+export default function CreateFeed () {
     const [form, setForm] = useState({
         title: "",
         message: "",
