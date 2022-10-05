@@ -22,7 +22,7 @@ export function Profile() {
 
   function handleLogOut() {
     localStorage.removeItem("loggedInUser");
-    navigate("/");
+    navigate("/login");
   }
 
   return (
