@@ -1,7 +1,13 @@
 import "../../index.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/authContext";
+import { useContext } from "react";
 
 export function MyMoods(){
+
+    const { loggedInUser } = useContext(AuthContext);
+
     return (
         <>
     
@@ -16,7 +22,7 @@ export function MyMoods(){
                     PÁGINA SELECIONADA
                 </h3>
                 <h1 className="nameHeaderPages">
-                    FirstName LastName
+                {loggedInUser.user.name}
                 </h1>
             </div>
             <Link to ="/profile">

@@ -98,6 +98,7 @@
         font-sans
         text-[#ffffff]
         text-2xl
+        font-bold
         
     }
 
@@ -295,7 +296,23 @@
         text-sm
     }
 
-   
+
+
+
+/* PROFILE */
+    .editInfos{
+        @apply
+        my-40
+        ml-10
+        w-4/5
+        flex
+        flex-col
+        justify-start
+        items-start
+    }
+
+
+
 
 
 /* MENU / FOOTER */
