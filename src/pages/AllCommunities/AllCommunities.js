@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import axios from "axios";
 import CreateFeed from "../../components/CreateFeed/createFeed";
 import Communities from "../../components/CommunitiesCard/communitiesCard";
@@ -22,9 +23,10 @@ export function AllCommunities(){
     return(
         <>
             <div>
-                <CreateFeed />
+                <Communities />
                 {communities.map((current) => {return <CreateFeed communities={current} />})}
             </div>
+            
         </>
     )
 }
