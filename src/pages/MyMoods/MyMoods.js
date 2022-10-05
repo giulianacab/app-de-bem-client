@@ -3,9 +3,27 @@ import { Link } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/authContext";
+import { useEffect, useState } from "react";
+import { MoodFeed } from "../../components/MoodFeed/MoodFeed";
+import { api } from "../../api/api";
 
 export function MyMoods(){
     const { loggedInUser } = useContext(AuthContext);
+    const [moods, setMoods] = useState([]);
+
+    useEffect(() => {
+        async function fetchMoods() {
+            try {
+                const response = await api.get(`/moods/${loggedInUser.user._id}/allMoods`);
+    
+            setMoods([...response.data]);
+            console.log(moods)
+            } catch (err) {
+            console.log(err);
+            }
+        }
+        fetchMoods();
+        }, []);
 
     return (
         <>
@@ -23,144 +41,15 @@ export function MyMoods(){
 
         {/* MOOD FEED */}
         <div className="moodFeed">
-            {/* DAY1 */}
-            <div className="boxMoodFeed">
-                    <div className="imgHumorMoodFeed">
-                        <img src="https://svgshare.com/i/n86.svg" className="benzinhaOfThisDay" alt="humorOfThisDay"></img>
-                    </div>
-
-                <div className="textsMoodFeed">
-                    <div className="dateMoodFeed">
-                        <h6 className="dateTxtMoodFeed">23/04/2022</h6>
-                    </div>
-                    <div className="nameHumorMoodFeed">
-                        <h4 className="nameTxtHumorMoodFeed">De bem</h4>
-                    </div>
-                    <div className="msgHumorMoodFeed">
-                        <h5 className="msgTxtHumorMoodFeed">Aqui vai um comentário (opcional) da pessoa sobre o dia dela</h5>
-                    </div>
-                </div>
-
-            </div>
-
-        {/* OS DIAS A SEGUIR ERAM APENAS PARA TESTAR O
-        SCROLL DA PÁGINA E DEIXAR CONFIGURADO CERTINHO */}
-
-            {/* DAY2 */}
-            <div className="boxMoodFeed">
-                    <div className="imgHumorMoodFeed">
-                        <img src="https://svgshare.com/i/n86.svg" className="benzinhaOfThisDay" alt="humorOfThisDay"></img>
-                    </div>
-
-                <div className="textsMoodFeed">
-                    <div className="dateMoodFeed">
-                        <h6 className="dateTxtMoodFeed">23/04/2022</h6>
-                    </div>
-                    <div className="nameHumorMoodFeed">
-                        <h4 className="nameTxtHumorMoodFeed">De bem</h4>
-                    </div>
-                    <div className="msgHumorMoodFeed">
-                        <h5 className="msgTxtHumorMoodFeed">Aqui vai um comentário (opcional) da pessoa sobre o dia dela</h5>
-                    </div>
-                </div>
-                
-            </div>
-
-
-
-            {/* DAY3 */}
-            <div className="boxMoodFeed">
-                    <div className="imgHumorMoodFeed">
-                        <img src="https://svgshare.com/i/n86.svg" className="benzinhaOfThisDay" alt="humorOfThisDay"></img>
-                    </div>
-
-                <div className="textsMoodFeed">
-                    <div className="dateMoodFeed">
-                        <h6 className="dateTxtMoodFeed">23/04/2022</h6>
-                    </div>
-                    <div className="nameHumorMoodFeed">
-                        <h4 className="nameTxtHumorMoodFeed">De bem</h4>
-                    </div>
-                    <div className="msgHumorMoodFeed">
-                        <h5 className="msgTxtHumorMoodFeed">Aqui vai um comentário (opcional) da pessoa sobre o dia dela</h5>
-                    </div>
-                </div>
-                
-            </div>
-
-
-
-
-            {/* DAY4 */}
-            <div className="boxMoodFeed">
-                    <div className="imgHumorMoodFeed">
-                        <img src="https://svgshare.com/i/n86.svg" className="benzinhaOfThisDay" alt="humorOfThisDay"></img>
-                    </div>
-
-                <div className="textsMoodFeed">
-                    <div className="dateMoodFeed">
-                        <h6 className="dateTxtMoodFeed">23/04/2022</h6>
-                    </div>
-                    <div className="nameHumorMoodFeed">
-                        <h4 className="nameTxtHumorMoodFeed">De bem</h4>
-                    </div>
-                    <div className="msgHumorMoodFeed">
-                        <h5 className="msgTxtHumorMoodFeed">Aqui vai um comentário (opcional) da pessoa sobre o dia dela</h5>
-                    </div>
-                </div>
-                
-            </div>
-
-
-
-            {/* DAY5 */}
-            <div className="boxMoodFeed">
-                    <div className="imgHumorMoodFeed">
-                        <img src="https://svgshare.com/i/n86.svg" className="benzinhaOfThisDay" alt="humorOfThisDay"></img>
-                    </div>
-
-                <div className="textsMoodFeed">
-                    <div className="dateMoodFeed">
-                        <h6 className="dateTxtMoodFeed">23/04/2022</h6>
-                    </div>
-                    <div className="nameHumorMoodFeed">
-                        <h4 className="nameTxtHumorMoodFeed">De bem</h4>
-                    </div>
-                    <div className="msgHumorMoodFeed">
-                        <h5 className="msgTxtHumorMoodFeed">Aqui vai um comentário (opcional) da pessoa sobre o dia dela</h5>
-                    </div>
-                </div>
-                
-            </div>
-
-
-
-            {/* DAY6 */}
-            <div className="boxMoodFeed">
-                    <div className="imgHumorMoodFeed">
-                        <img src="https://svgshare.com/i/n86.svg" className="benzinhaOfThisDay" alt="humorOfThisDay"></img>
-                    </div>
-
-                <div className="textsMoodFeed">
-                    <div className="dateMoodFeed">
-                        <h6 className="dateTxtMoodFeed">23/04/2022</h6>
-                    </div>
-                    <div className="nameHumorMoodFeed">
-                        <h4 className="nameTxtHumorMoodFeed">De bem</h4>
-                    </div>
-                    <div className="msgHumorMoodFeed">
-                        <h5 className="msgTxtHumorMoodFeed">Aqui vai um comentário (opcional) da pessoa sobre o dia dela</h5>
-                    </div>
-                </div>
-                
-            </div>
-        
+            {moods.map((current)=>{
+                return (<MoodFeed 
+                            bemzinha={current.bemzinha} 
+                            createdAt={current.createdAt} 
+                            mood={current.mood} 
+                            text={current.text}
+                        />)
+            })}
         </div>
-
-
-
-
-
 
 
         {/* MENU */}
