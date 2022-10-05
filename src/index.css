@@ -82,14 +82,14 @@
         flex
         flex-col
         justify-evenly
-        items-center
+        items-start
     }
 
     .titleHeaderPages{
         @apply
         font-sans
         text-[#ffffff]
-        text-xl
+        text-xs
         
     }
 
@@ -97,7 +97,7 @@
         @apply
         font-sans
         text-[#ffffff]
-        text-3xl
+        text-2xl
         
     }
 
