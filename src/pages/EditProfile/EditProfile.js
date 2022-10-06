@@ -2,10 +2,42 @@ import { Header } from "../../components/Header/Header";
 import { Menu } from "../../components/Menu/Menu";
 import { AuthContext } from "../../contexts/authContext";
 import { useContext } from "react";
+import {useParams} from "react-router-dom"
+import { useState } from "react"
+import axios from "axios"
 
 export function EditProfile(){
 
 const { loggedInUser } = useContext(AuthContext);
+const { id } = useParams();
+    const [form, setForm] = useState({
+        name: "",
+        username: "",
+        email: "",
+        role: "",
+    });
+    
+
+    function handleChange(e){
+        setForm({...form, [e.target.name]: e.target.value})
+    }
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        try {
+          const response = await axios.put(
+            `/editprofile`,
+            form
+          );
+    
+          
+          
+    
+          console.log(response);
+        } catch (err) {
+          console.log(err);
+        }
+      }
     
     return (
         <>
@@ -21,7 +53,7 @@ const { loggedInUser } = useContext(AuthContext);
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <form action="#" method="POST">
+            <form  onSubmit={handleSubmit}>
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-pink px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
@@ -35,6 +67,9 @@ const { loggedInUser } = useContext(AuthContext);
                         name="name"
                         id="name"
                         autoComplete="name"
+                        required
+                        value={form.name}
+                        onChange={handleChange}
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
@@ -47,22 +82,14 @@ const { loggedInUser } = useContext(AuthContext);
                         name="username"
                         id="username"
                         autoComplete="username"
+                        required
+                        value={form.username}
+                        onChange={handleChange}
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
-                    <div className="col-span-6 sm:col-span-3">
-                      <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                        Nova Senha
-                      </label>
-                      <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        autoComplete="password"
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      />
-                    </div>
+                    
 
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -73,21 +100,27 @@ const { loggedInUser } = useContext(AuthContext);
                         name="email"
                         id="email"
                         autoComplete="email"
+                        required
+                        value={form.email}
+                        onChange={handleChange}
                         className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
                     <div className="col-span-6 sm:col-span-3">
-                      <label htmlFor="gender" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="role" className="block text-sm font-medium text-gray-700">
                         Genero
                       </label>
                       <select
-                        id="gender"
-                        name="gender"
-                        autoComplete="gender"
+                        id="role"
+                        name="role"
+                        autoComplete="role"
+                        required
+                        value={form.role}
+                        onChange={handleChange}
                         className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                       >
-                        <option>Feminino</option>
-                        <option>Não Binario</option>
+                        <option value="USERFEM">Feminino</option>
+                        <option value="USERNB">Não Binario</option>
                         
                       </select>
                     </div>

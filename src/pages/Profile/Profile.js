@@ -29,15 +29,12 @@ export function Profile() {
     <>
      <Header where="MEU PERFIL" name={loggedInUser.user.name} />
 
-
-
-
-
     {/* EDIT INFOS */}
     <div className="editInfos bg-pink px-4 py-5 sm:p-6">
 
       <div className="editName ">
-        <h4 className="yourName ">Seu nome: {loggedInUser.user.name}</h4>
+        <h4 className="yourName font-bold ">Seu nome: </h4>
+        <p>{loggedInUser.user.name}</p>
       </div>
 
       <div className="editUsername">
@@ -54,16 +51,6 @@ export function Profile() {
       <h4>Seu Genero: {loggedInUser.user.gender} </h4>
       </div>
 
-    
-
-    {/* BUTTONS */}
-    {/* <button className="buttonUpdateInfo  ">
-      Atualizar!
-    </button> */}
-
-
-    
-    
     </div>
 
     <Menu/>
