@@ -20,15 +20,16 @@ export function Settings(){
             <Header where="SETTINGS" name={loggedInUser.user.name} />
             
             <div className={style.container}>
+            <Link to="/editprofile">
             <div className="myProgress">
-                <Link to="/editprofile">
+                
                     <button>
                        <h4 className="titleSuggCommunity">Edit your profile</h4>
                     </button>
-                </Link>
             </div>
+            </Link>
 
-    
+            
             <div className="logOut">
                 <button onClick={handleLogOut}>
                     <h4 className="titleSuggCommunity">Sair da conta</h4>
