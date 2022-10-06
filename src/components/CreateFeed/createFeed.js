@@ -31,8 +31,8 @@ export default function AddForm () {
     return (
         
       <form onSubmit={handleSubmit}>
-      <div className="flex min-h-full bg-orange w-screen h-screen justify-center py-12 px-4 sm:px-6 lg:px-8">
-          <div className="w-full max-w-md space-y-8">
+      <div className="flex min-h-full items-center w-screen h-screen bg-white justify-center py-12 px-4 sm:px-6 lg:px-8">
+          <div className="w-full max-w-md space-y-3">
             
             
               <input type="hidden" name="remember" defaultValue="true" />
