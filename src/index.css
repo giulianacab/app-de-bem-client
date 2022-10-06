@@ -192,7 +192,7 @@
 
     .logOut{
         @apply
-        bg-[#DF3B57]
+        bg-[#FF220C]
         flex
         flex-row
         
@@ -203,7 +203,7 @@
 
         rounded-xl
         border-solid
-        border-[#DF3B57]
+        border-[#FF220C]
         border
 
         m-10
