@@ -1,8 +1,12 @@
 export function MoodToday(){
+
+
+
+
     return (
     <div className="moodToday">
-        <h3 className="titleMoodToday">Como está seu humor hoje?</h3>
-        <div className="chooseMood">
+        <h3 className="titleMoodToday mt-6 text-center text-2xl tracking-tight text-gray-900">Como está seu humor hoje?</h3>
+        <div className="chooseMood mt-6 text-center tracking-tight text-gray-900">
           <div>
             <img src="https://svgshare.com/i/n9W.svg" className="benzinha1" alt="triste"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>triste</span></center>

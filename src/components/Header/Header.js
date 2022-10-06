@@ -37,7 +37,7 @@ export function Header(props){
             <Link to ="/profile" style={{marginRight:"1rem"}}>
             <img src={user.avatar} className={`${style.settingsBtn} avatar`} alt ="default avatar" />
             </Link>
-            <div className="textHeaderPages">
+            <div className="textHeaderPages mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
                 <h3 className="titleHeaderPages">
                     {props.where}
                 </h3>
