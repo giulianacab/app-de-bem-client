@@ -19,7 +19,6 @@ export function Header(props){
                 const response = await api.get(`/users/${loggedInUser.user._id}`);
     
                 setUser({...response.data});
-                console.log(user)
             } catch (err) {
             console.log(err);
             }

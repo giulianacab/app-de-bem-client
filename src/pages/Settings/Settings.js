@@ -21,18 +21,18 @@ export function Settings(){
             
             <div className={style.container}>
             <Link to="/editprofile">
-            <div className="myProgress">
+            <div className={`myProgress ${style.bttnhover}`}>
                 
                     <button>
-                       <h4 className="titleSuggCommunity">Edit your profile</h4>
+                       <h4 className="titleSuggCommunity">EDIT YOUR PROFILE</h4>
                     </button>
             </div>
             </Link>
 
-            <button onClick={handleLogOut}>
+            <button onClick={handleLogOut} className={style.bttnhover}>
             <div className="logOut">
                 
-                    <h4 className="titleSuggCommunity">Sair da conta</h4>
+                    <h4 className="titleSuggCommunity">SAIR DA CONTA</h4>
                 
             </div>
             </button> 

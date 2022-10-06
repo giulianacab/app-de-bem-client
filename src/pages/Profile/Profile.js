@@ -34,34 +34,32 @@ export function Profile() {
 
 
     {/* EDIT INFOS */}
-    <div className="editInfos">
+    <div className="editInfos bg-pink px-4 py-5 sm:p-6">
 
-      <div className="editName">
-        <h4 className="yourName">Seu nome: {loggedInUser.user.name}</h4>
-        <h4 className="newName">Novo nome:</h4>
+      <div className="editName ">
+        <h4 className="yourName ">Seu nome: {loggedInUser.user.name}</h4>
       </div>
 
       <div className="editUsername">
         <h4 className="yourUsername">Seu username: {loggedInUser.user.username}</h4>
-        <h4 className="newUsername">Novo username:</h4>
       </div>
 
       <div className="editEmail">
         <h4 className="yourEmail">Seu e-mail: {loggedInUser.user.email}</h4>
-        <h4 className="newEmail">Novo e-mail:</h4>
       </div>
 
       <div className="editPassword">
-        <h4 className="yourEmail">Sua senha atual:</h4>
-        <h4 className="newEmail">Nova senha:</h4>
+      </div>
+      <div className="gender">
+      <h4>Seu Genero: {loggedInUser.user.gender} </h4>
       </div>
 
     
 
     {/* BUTTONS */}
-    <button className="buttonUpdateInfo">
+    {/* <button className="buttonUpdateInfo  ">
       Atualizar!
-    </button>
+    </button> */}
 
 
     

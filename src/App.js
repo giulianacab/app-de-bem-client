@@ -12,10 +12,18 @@ import { CurrentMood } from "./pages/CurrentMood/CurrentMood.js";
 import { Settings } from "./pages/Settings/Settings.js";
 import "./index.css";
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import { EditProfile } from "./pages/EditProfile/EditProfile.js";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <>
+      <div>
+        <Toaster
+            position="top-center"
+            reverseOrder={false}
+        />
+      </div>
       <AuthContextComponent>
         <Routes>
           <Route 
@@ -27,6 +35,10 @@ function App() {
           <Route
             path="/profile"
             element={<ProtectedRoute component={Profile} />}
+          />
+          <Route
+            path="/editprofile"
+            element={<ProtectedRoute component={EditProfile} />}
           />
           <Route
             path="/communities"
