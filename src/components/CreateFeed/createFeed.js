@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../../api/api";
-
+import style from "./createFeed.module.css"
 
 export default function AddForm () {
 
@@ -76,8 +76,7 @@ export default function AddForm () {
               <div>
                 <button 
                   type="Enviar"
-                  className="group relative flex w-full justify-center rounded-md border border-transparent bg-pink py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
+                  className={`${style.bttnhover} group relative flex w-full h-10 justify-center items-center rounded-2xl border border-pink bg-pink py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700  focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2`}                >
                   <span className="absolute inset-y-0 left-0 flex items-center pl-3">
                   </span>
                   Enviar
