@@ -1,15 +1,40 @@
 import { Link } from "react-router-dom"
 import style from "./Header.module.css"
+import { useContext } from "react"
+import { AuthContext } from "../../contexts/authContext"
+import { useEffect, useState } from "react";
+import { api } from "../../api/api";
 
 
 export function Header(props){
+
+    const loggedInUser = useContext(AuthContext);
+    console.log(loggedInUser);
+    const [user, setUser] = useState({});
+
+    useEffect(() => {
+        async function fetchUser() {
+            try {
+                const response = await api.get(`/users/${loggedInUser.user._id.toString()}`);
+    
+                setUser({...response.data});
+                console.log(user)
+            } catch (err) {
+            console.log(err);
+            }
+        }
+        fetchUser();
+        }, []);
+
+   
+    
     return (
         <>
         <div className={`headerPages ${style.container}`}>
           <div className="divHeaderPages">
         <div className={style.info} >
             <Link to ="/profile" style={{marginRight:"1rem"}}>
-            <img src="https://images2.imgbox.com/54/1f/hdwOJPTU_o.png" className={`${style.settingsBtn} avatar`} alt ="default avatar" />
+            <img src="https://res.cloudinary.com/dyewwodsm/image/upload/v1665039578/pictures/file_wd3pvp.png" className={`${style.settingsBtn} avatar`} alt ="default avatar" />
             </Link>
             <div className="textHeaderPages">
                 <h3 className="titleHeaderPages">

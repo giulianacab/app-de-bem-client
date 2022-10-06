@@ -4,7 +4,7 @@ import { AuthContext } from "../../contexts/authContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { style } from "@mui/system";
+import style from "./Settings.module.css"
 
 export function Settings(){
     const navigate = useNavigate();
@@ -18,17 +18,24 @@ export function Settings(){
     return(
         <>
             <Header where="SETTINGS" name={loggedInUser.user.name} />
+            
             <div className={style.container}>
+            <div className="myProgress">
                 <Link to="/editprofile">
-                <button>
-        `               Edit your profile`
-                </button>
+                    <button>
+                       <h4 className="titleSuggCommunity">Edit your profile</h4>
+                    </button>
                 </Link>
-
-                <button onClick={handleLogOut} className="btn btn-danger">
-                    Sair
-                </button>
             </div>
+
+    
+            <div className="logOut">
+                <button onClick={handleLogOut}>
+                    <h4 className="titleSuggCommunity">Sair da conta</h4>
+                </button> 
+            </div>
+            </div>
+            
 
             <Menu />
 

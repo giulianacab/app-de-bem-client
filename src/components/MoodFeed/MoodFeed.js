@@ -14,7 +14,7 @@ export function MoodFeed(props){
                         <h6 className="dateTxtMoodFeed">Dia: {props.createdAt.slice(0,10)} / Horário: {props.createdAt.slice(11,16)}</h6>
                     </div>
                     <div className="nameHumorMoodFeed">
-                        <h4 className="nameTxtHumorMoodFeed">{props.mood}</h4>
+                        <h4 className="nameTxtHumorMoodFeed" style={{color:"white"}}>{props.mood}</h4>
                     </div>
                     <div className="msgHumorMoodFeed">
                         <h5 className="msgTxtHumorMoodFeed">{props.text}</h5>
