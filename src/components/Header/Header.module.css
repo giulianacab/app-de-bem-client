@@ -12,6 +12,17 @@
     transform: scale(1.08);
 }
 
+.profilePic:hover{
+    cursor: pointer;
+    box-shadow: 0 0.2rem 1.3rem 0 #FF6648;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.profilePic{
+    border-radius: 50px;
+}
+
 .settingsBtn{
     border-radius: 50px;
 }

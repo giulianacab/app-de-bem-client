@@ -4,3 +4,9 @@
     justify-content: space-around;
     margin-top: 10rem;
 }
+
+.bttnhover:hover{
+    cursor: pointer;
+    transition: transform 150ms;
+    transform: scale(1.02);
+}

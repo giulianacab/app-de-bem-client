@@ -6,7 +6,7 @@ import CreateFeed from "../../components/CreateFeed/createFeed";
 import { AuthContext } from "../../contexts/authContext";
 import { api } from "../../api/api";
 import { Menu } from "../../components/Menu/Menu";
-import Community from "../../components/Community/Community";
+import CommunityCard from "../../components/CommunityCard/CommunityCard";
 
 export function AllCommunities(){
     const [communities, setCommunities] = useState([]);
@@ -28,10 +28,9 @@ export function AllCommunities(){
     return(
         <>
             <Header where="COMUNIDADES" name={loggedInUser.user.name} />
-                <div>
+                <div style={{marginTop:"10rem"}}>
                     
-                    {communities.map((current) => { return <Community title={current.title} img={current.communityPic}/>
-                 })}
+                {communities.map((current) => { return <CommunityCard title={current.title} img={current.communityPic} path={current._id}/>})}
                 </div>
 
             <Menu />

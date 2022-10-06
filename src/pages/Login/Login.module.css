@@ -1,6 +1,5 @@
 .bttnhover:hover{
     cursor: pointer;
-    box-shadow: 0 0.2rem 1.3rem 0 rgb(213, 93, 187);
     transition: transform 150ms;
     transform: scale(1.02);
 }
