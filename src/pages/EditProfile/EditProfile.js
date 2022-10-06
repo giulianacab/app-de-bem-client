@@ -13,9 +13,8 @@ const { id } = useParams();
     const [form, setForm] = useState({
         name: "",
         username: "",
-        password: "",
         email: "",
-        gender: "",
+        role: "",
     });
     
 
@@ -90,21 +89,7 @@ const { id } = useParams();
                       />
                     </div>
 
-                    <div className="col-span-6 sm:col-span-3">
-                      <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                        Nova Senha
-                      </label>
-                      <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        autoComplete="password"
-                        required
-                        value={form.password}
-                        onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      />
-                    </div>
+                    
 
                     <div className="col-span-6 sm:col-span-4">
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -122,20 +107,20 @@ const { id } = useParams();
                       />
                     </div>
                     <div className="col-span-6 sm:col-span-3">
-                      <label htmlFor="gender" className="block text-sm font-medium text-gray-700">
+                      <label htmlFor="role" className="block text-sm font-medium text-gray-700">
                         Genero
                       </label>
                       <select
-                        id="gender"
-                        name="gender"
-                        autoComplete="gender"
+                        id="role"
+                        name="role"
+                        autoComplete="role"
                         required
-                        value={form.gender}
+                        value={form.role}
                         onChange={handleChange}
                         className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                       >
-                        <option>Feminino</option>
-                        <option>Não Binario</option>
+                        <option value="USERFEM">Feminino</option>
+                        <option value="USERNB">Não Binario</option>
                         
                       </select>
                     </div>
