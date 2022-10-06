@@ -7,7 +7,7 @@ export default function Community(props){
     
 
     return (
-        <div className={`communities ${style.container}`} style={{backgroundColor:"#FFD110"}}>
+        <div className={`communities ${style.container} w-full max-w-md space-y-3`} style={{backgroundColor:"#FFD110"}}>
                 <div className="imgHumorMoodFeed">
                     <img src={props.img} className="benzinhaOfThisDay" alt="humorOfThisDay"></img>
                 </div>
