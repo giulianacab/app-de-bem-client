@@ -27,7 +27,7 @@ export function Profile() {
 
   return (
     <>
-     <Header where="MY PROFILE" name={loggedInUser.user.name} />
+     <Header where="MEU PERFIL" name={loggedInUser.user.name} />
 
     {/* EDIT INFOS */}
     <div className="editInfos bg-pink px-4 py-5 sm:p-6">

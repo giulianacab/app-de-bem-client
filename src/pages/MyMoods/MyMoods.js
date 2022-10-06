@@ -11,6 +11,7 @@ import { Menu } from "../../components/Menu/Menu";
 export function MyMoods(){
     const { loggedInUser } = useContext(AuthContext);
     const [moods, setMoods] = useState([]);
+    const [reload, setReload] = useState(false);
 
     useEffect(() => {
         async function fetchMoods() {
@@ -18,13 +19,14 @@ export function MyMoods(){
                 const response = await api.get(`/moods/${loggedInUser.user._id}/allMoods`);
     
             setMoods([...response.data]);
-            console.log(moods)
+            setReload(false);
             } catch (err) {
             console.log(err);
+            setReload(false);
             }
         }
         fetchMoods();
-        }, []);
+        }, [reload]);
 
     return (
         <>
@@ -38,13 +40,15 @@ export function MyMoods(){
 
         {/* MOOD FEED */}
         <div className={`moodFeed ${style.moods}`}>
-            {moods.map((current)=>{
+            {moods.slice(0).reverse().map((current)=>{
                 return (<MoodFeed 
                             bemzinha={current.bemzinha} 
                             createdAt={current.createdAt} 
                             mood={current.mood} 
                             text={current.text}
                             color={current.color}
+                            id={current._id}
+                            reload={setReload}
                         />)
             })}
         </div>
