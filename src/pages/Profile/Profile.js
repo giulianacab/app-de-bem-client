@@ -3,7 +3,7 @@ import { useContext } from "react";
 // import { api } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/authContext";
-import { Link } from "react-router-dom";
+import { Header } from "../../components/Header/Header";
 import { Menu } from "../../components/Menu/Menu";
 
 export function Profile() {
@@ -27,25 +27,7 @@ export function Profile() {
 
   return (
     <>
-    {/* HEADER */}
-    <header className="headerPages">
-      <div className="divHeaderPages">
-        <Link to ="/profile">
-        <img src="https://images2.imgbox.com/54/1f/hdwOJPTU_o.png" className="avatar" alt ="default avatar" />
-        </Link>
-        <div className="textHeaderPages">
-            <h3 className="titleHeaderPages">
-                PÁGINA SELECIONADA
-            </h3>
-            <h1 className="nameHeaderPages">
-              {loggedInUser.user.name}
-            </h1>
-        </div>
-        <Link to ="/profile">
-        <img src="https://svgshare.com/i/nAs.svg" className="configIcon" alt="config icon" />
-        </Link>
-      </div>
-    </header>
+     <Header where="MY PROFILE" name={loggedInUser.user.name} />
 
 
 
@@ -82,9 +64,7 @@ export function Profile() {
     </button>
 
 
-    <button onClick={handleLogOut} className="buttonLogOut">
-      Sair
-    </button>
+    
     
     </div>
 

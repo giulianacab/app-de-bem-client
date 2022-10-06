@@ -9,6 +9,7 @@ import { AllCommunities } from "./pages/AllCommunities/AllCommunities.js";
 import { Community } from "./pages/Community/Community.js";
 import { MyMoods } from "./pages/MyMoods/MyMoods.js";
 import { CurrentMood } from "./pages/CurrentMood/CurrentMood.js";
+import { Settings } from "./pages/Settings/Settings.js";
 import "./index.css";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
@@ -42,6 +43,10 @@ function App() {
           <Route
             path="/currentmood"
             element={<ProtectedRoute component={CurrentMood} />}
+          />
+          <Route
+            path="/settings"
+            element={<ProtectedRoute component={Settings} />}
           />
           <Route path="*" element={<ErrorPage />} />
         </Routes>

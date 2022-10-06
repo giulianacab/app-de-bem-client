@@ -29,7 +29,7 @@ export function MyMoods(){
     return (
         <>
     
-        <Header where="My Moods" name={loggedInUser.user.name} />
+        <Header where="MY MOODS" name={loggedInUser.user.name} />
 
         {/* TITLE MOOD FEED */}
         {/* <div className={`divTitlePageMoodFeed ${style.myMoodsHeader}`}>
