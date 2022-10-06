@@ -324,12 +324,18 @@
     .editInfos{
         @apply
         my-40
-        ml-10
-        w-4/5
+       
+       
         flex
         flex-col
         justify-start
         items-start
+    }
+
+    .EditProfileForm{
+        @apply
+        my-40
+        
     }
 
 
