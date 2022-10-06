@@ -35,7 +35,7 @@ export function Header(props){
           <div className="divHeaderPages">
         <div className={style.info} >
             <Link to ="/profile" style={{marginRight:"1rem"}}>
-            <img src={user.avatar} className={`${style.settingsBtn} avatar`} alt ="default avatar" />
+            <img src={user.avatar} className={`${style.profilePic} avatar`} alt ="default avatar" />
             </Link>
             <div className="textHeaderPages mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
                 <h3 className="titleHeaderPages">

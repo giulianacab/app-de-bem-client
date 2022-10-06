@@ -27,7 +27,7 @@ export function Profile() {
 
   return (
     <>
-     <Header where="MY PROFILE" name={loggedInUser.user.name} />
+     <Header where="MEU PERFIL" name={loggedInUser.user.name} />
 
 
 

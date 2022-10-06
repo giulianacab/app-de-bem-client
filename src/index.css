@@ -154,7 +154,7 @@
 
     .myProgress{
         @apply
-        bg-[#FF94AE]
+        bg-[pink]
         flex
         flex-row
 
@@ -165,7 +165,7 @@
 
         rounded-xl
         border-solid
-        border-[#FF94AE]
+        border-[pink]
         border
 
         m-10

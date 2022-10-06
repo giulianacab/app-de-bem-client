@@ -29,12 +29,13 @@ export function Settings(){
             </div>
             </Link>
 
-            
+            <button onClick={handleLogOut}>
             <div className="logOut">
-                <button onClick={handleLogOut}>
+                
                     <h4 className="titleSuggCommunity">Sair da conta</h4>
-                </button> 
+                
             </div>
+            </button> 
             </div>
             
 
