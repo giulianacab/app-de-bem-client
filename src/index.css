@@ -37,7 +37,7 @@
 
     .titleHome{
         @apply
-        font-sans
+        font-normal
         text-[#ffffff]
         text-3xl
         
@@ -89,7 +89,7 @@
 
     .titleHeaderPages{
         @apply
-        font-sans
+        font-normal
         text-[#ffffff]
         text-xs
         
@@ -97,11 +97,9 @@
 
     .nameHeaderPages{
         @apply
-        font-sans
+        font-bold
         text-[#ffffff]
         text-2xl
-        font-bold
-        
     }
 
     .configIcon{
@@ -127,8 +125,8 @@
 
     .titleMoodToday{
         @apply
-        font-sans
-        text-[#000000]
+        font-bold
+        text-[#5c5c5c]
         text-xl
 
         py-8
@@ -210,7 +208,7 @@
 
     .titleMyProgress, .titleSuggCommunity{
         @apply
-        font-sans
+        font-normal
         text-white
         text-base
 
@@ -349,10 +347,10 @@
     .communityFeed{
         @apply
         flex
-        flex-col
+        flex-row
         w-full
-        h-screen
-        -mb-28
+        mt-36
+        -mb-16
         justify-center
         items-center
     }
