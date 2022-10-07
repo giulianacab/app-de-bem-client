@@ -120,16 +120,15 @@
         w-full
         h-10
         box-border
-        my-40
+        my-36
     }
 
     .titleMoodToday{
         @apply
         font-bold
-        text-[#5c5c5c]
+        text-orange
         text-xl
-
-        py-8
+        p-8
     }
 
     .chooseMood{
@@ -141,7 +140,6 @@
         w-4/5
         h-40
         box-border
-
     }
 
     .benzinha1, .benzinha2, .benzinha3, .benzinha4, .benzinha5{
@@ -154,17 +152,14 @@
         bg-[pink]
         flex
         flex-row
-
         items-center
-        w-4/5
+        w-full
         h-40
         box-border
-
         rounded-xl
         border-solid
         border-[pink]
         border
-
         m-10
     }
 

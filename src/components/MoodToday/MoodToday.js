@@ -19,7 +19,7 @@ export function MoodToday(props){
     
     return (
     <div className="moodToday">
-        <h3 className="titleMoodToday" style={{marginTop:"0", color:"#FF6648"}}>Como está seu humor hoje?</h3>
+        <h3 className="titleMoodToday">Como está seu humor hoje?</h3>
         <div className="chooseMood mt-6 text-center" style={{marginTop:"0"}}>
           <button onClick={()=>{handleMood("triste","#A706CE","https://svgshare.com/i/nEZ.svg")}}>
             <img src="https://svgshare.com/i/n9W.svg" className={`benzinha1 ${style.icon}`} alt="triste"></img>
