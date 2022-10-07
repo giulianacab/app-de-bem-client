@@ -1,0 +1,29 @@
+
+
+.pic{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50px;
+    margin-left: 2rem;
+    margin-right: 0;
+}
+
+.progress{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    height: 17rem;
+    background-color: #FF94AE;
+    border-radius: 15px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+
+}
