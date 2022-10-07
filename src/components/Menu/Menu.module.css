@@ -1,6 +1,6 @@
 .btn:hover{
     cursor: pointer;
-    box-shadow: 0 0.2rem 1.3rem 0 pink;
+  
     transition: transform 150ms;
     transform: scale(1.1);
 }
