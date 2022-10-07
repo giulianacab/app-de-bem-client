@@ -65,7 +65,7 @@ export function Profile() {
 
     </div>
 
-    <Menu/>
+    <Menu />
 
     </>
   );

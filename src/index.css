@@ -342,9 +342,88 @@
 
 
 
+/* EDIT PROFILE */
+    .editProfileForm{
+        @apply
+        flex
+        flex-col
+        mt-40
+        pl-10 pr-10
+        w-full
+        items-start
+        justify-start
+    }
+
+    .titleEditProfile{
+        @apply
+        font-bold
+        text-4xl
+        mb-8
+    }
+    .titleTxtEditProfile{}
+
+    .formEditProfile{
+        @apply
+        w-full
+    }
+
+    .nameFormEditProfile, .usernameFormEditProfile, .emailFormEditProfile, .genderFormEditProfile, .imgFormEditProfile{
+        @apply
+        font-normal
+        text-base
+    }
+
+    .nameLabelFormEditProfile, .usernameLabelFormEditProfile, .emailLabelFormEditProfile, .genderLabelFormEditProfile, .imgLabelFormEditProfile, .genderOption{
+        @apply
+        flex
+        flex-row
+        p-2
+        text-lg
+    }
+
+    .nameTxtFormEditProfile, .usernameTxtFormEditProfile, .emailTxtFormEditProfile, .genderTxtFormEditProfile{
+        @apply
+        flex
+        flex-row
+        w-full
+        p-3
+        mb-4
+        justify-start
+        items-start
+        bg-pink
+        border-l-orange
+        border-l-8
+        rounded-3xl
+        text-[#ffffff]
+    }
+
+    .genderOption{
+
+    }
+
+    .saveButtonEditProfile{
+        @apply
+        p-3
+        bg-[#A706CE]
+        border-l-8
+        rounded-full
+        text-[#ffffff]
+        mb-40
+        mt-10
+        font-bold
+        text-2xl
+        flex
+        items-center
+        justify-center
+    }
+
+
+
+
+
 
 /* POSTS DAS COMUNIDADES */
-    .communityFeed{
+    .communityFeed, .feeds{
         @apply
         flex
         flex-row

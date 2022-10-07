@@ -22,6 +22,5 @@ export function CommunityFeed(props){
             </div>
 
         </div>
-        
     )
 }

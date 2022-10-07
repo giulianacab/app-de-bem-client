@@ -65,116 +65,121 @@ const { loggedInUser } = useContext(AuthContext);
     return (
         <>
         <Header where="EDITAR PERFIL" name={loggedInUser.user.name} />
-        <div className="EditProfileForm" >
+        
+        <div className="editProfileForm" >
 
-        <div className="mt-10 sm:mt-0">
-        <div className="md:grid md:grid-cols-3 md:gap-6">
-          <div className="md:col-span-1">
-            <div className="px-4 sm:px-0">
-              <h3 className="text-lg font-medium leading-6 text-gray-900">Editar Perfil</h3>
-              <p className="mt-1 text-sm text-gray-600"></p>
+            <div className="titleEditProfile">
+              <h3 className="titleTxtEditProfile">📝 Edite seu perfil</h3>
             </div>
-          </div>
-          <div className="mt-5 md:col-span-2 md:mt-0">
-            <form  onSubmit={handleSubmit} >
-              <div className="overflow-hidden shadow sm:rounded-md">
-                <div className="bg-pink px-4 py-5 sm:p-6">
-                  <div className="grid grid-cols-6 gap-6">
-                  
-                  <div className="col-span-6 sm:col-span-3">
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                        Novo Nome
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        // autoComplete="name"
-                        required
-                        value={form.name}
-                        onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      />
-                    </div>
-                    <div className="col-span-6 sm:col-span-3">
-                      <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-                        Novo Username
-                      </label>
-                      <input
-                        type="text"
-                        name="username"
-                        id="username"
-                        autoComplete="username"
-                        required
-                        value={form.username}
-                        onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      />
-                    </div>
 
-                    
+            <div className="formEditProfile">
 
-                    <div className="col-span-6 sm:col-span-4">
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                        Novo Email
-                      </label>
-                      <input
-                        type="text"
-                        name="email"
-                        id="email"
-                        autoComplete="email"
-                        required
-                        value={form.email}
-                        onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                      />
-                    </div>
-                    <div className="col-span-6 sm:col-span-3">
-                      <label htmlFor="role" className="block text-sm font-medium text-gray-700">
-                        Gênero
-                      </label>
-                      <select
-                        id="role"
-                        name="role"
-                        autoComplete="role"
-                        required
-                        value={form.role}
-                        onChange={handleChange}
-                        className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                      >
-                        <option value="UNDEF">Indefinido</option>
-                        <option value="USERFEM">Feminino</option>
-                        <option value="USERNB">Não Binario</option>
-                        
-                      </select>
-                    </div>
-                    
-                  <label htmlFor="formImg">Sua foto de perfil:</label>
-                  <input  type="file" id="formImg" onChange={handleImage} style={{width:"6rem"}} />
+              <form onSubmit={handleSubmit}>
 
-                  </div>
+                {/* NOVO NOME */}
+                <div className="nameFormEditProfile">
+
+                  <label htmlFor="name" className="nameLabelFormEditProfile">
+                    Novo nome:
+                  </label>
+
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    autoComplete="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    className="nameTxtFormEditProfile"
+                  />
+
                 </div>
-                <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
-                  <button
-                    type="submit"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-orange shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+
+
+                {/* NOVO USERNAME */}
+                <div className="usernameFormEditProfile">
+                
+                  <label htmlFor="username" className="usernameLabelFormEditProfile">
+                    Novo nome de usuário:
+                  </label>
+
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    autoComplete="username"
+                    value={form.username}
+                    onChange={handleChange}
+                    className="usernameTxtFormEditProfile"
+                  />
+                  
+                </div>
+
+                      
+
+                {/* NOVO E-MAIL */}
+                <div className="emailFormEditProfile">
+
+                  <label htmlFor="email" className="emailLabelFormEditProfile">
+                    Novo e-mail:
+                  </label>
+
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    autoComplete="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    className="emailTxtFormEditProfile"
+                  />
+                  
+                </div>
+
+
+
+                {/* DEFINIR GÊNERO */}
+                <div className="genderFormEditProfile">
+                  
+                  <label htmlFor="role" className="genderLabelFormEditProfile">
+                    Gênero:
+                  </label>
+
+                  <select
+                    id="role"
+                    name="role"
+                    autoComplete="role"
+                    value={form.role}
+                    onChange={handleChange}
+                    className="genderTxtFormEditProfile"
                   >
-                    Salvar
+                    <option className="genderOption" value="UNDEF">Indefinido</option>
+                    <option className="genderOption" value="USERFEM">Feminino</option>
+                    <option className="genderOption" value="USERNB">Não Binario</option>
+                  </select>
+
+                </div>
+
+
+
+
+                {/* EDITAR FOTO DE PERFIL */}
+                <label htmlFor="formImg" className="imgFormEditProfile">Sua foto de perfil:</label>
+
+                <input type="file" onChange={handleImage} className="imgLabelFormEditProfile" />
+
+                <div className="saveButtonEditProfile">
+                  <button type="submit">
+                    Salvar!
                   </button>
                 </div>
-                
-              </div>
-            </form>
-          </div>
-        </div>
+
+              </form>
+
+            </div>
       </div>
 
-      <div className="hidden sm:block" aria-hidden="true">
-        <div className="py-5">
-          <div className="border-t border-gray-200" />
-        </div>
-      </div>
-      </div>
+
       <Menu/>
       </>
     )
