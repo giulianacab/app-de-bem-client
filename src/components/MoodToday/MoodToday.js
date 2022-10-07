@@ -2,14 +2,15 @@ import style from "./MoodToday.module.css"
 import { api } from "../../api/api"
 import { toast } from "react-hot-toast"
 
-export function MoodToday(){
+export function MoodToday(props){
 
 
     async function handleMood(mood,color,bemzinha) {
         try{
            
             await api.post("/moods", {mood: mood, color: color, bemzinha: bemzinha})
-            toast.success('Mood escolhido com sucesso!')
+            toast.success('Mood escolhido com sucesso!');
+            props.reload(true);
         } catch(err) {
             console.log(err)
             toast.error("Apenas um Mood por dia")

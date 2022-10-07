@@ -168,6 +168,25 @@
         m-10
     }
 
+    .myProgressBem{
+        @apply
+        bg-[#1dbe93]
+        flex
+        flex-row
+
+        items-center
+        w-4/5
+        h-40
+        box-border
+
+        rounded-xl
+        border-solid
+        border-[pink]
+        border
+
+        m-10
+    }
+
     .suggestionCommunity{
         @apply
         bg-[#A706CE]
@@ -425,21 +444,33 @@
         flex-row
         w-full
         mt-36
-        -mb-16
+        -mb-28
         justify-center
         items-center
     }
 
-    .createNewFeedInsideFeed{
+    .addCommunityFeed{
         @apply
         flex
-        flex-col
-        w-4/5
-        mt-10
-        -mb-16
+        flex-row
+        mt-36
+        -mb-20
         justify-center
         items-center
+        p-6
+        bg-[#ffffff]
+        shadow-md
+        shadow-[#dadada]
     }
+
+    .titleAddCommFeed{
+        @apply
+        flex
+    }
+
+    .msgAddCommFeed{}
+
+    .labelAddCommFeed{}
 
     .boxCommunityFeed{
         @apply
@@ -505,7 +536,7 @@
         rounded-2xl
     }
 
-    .commentButton{        
+    .commentButton, .buttonAddCommFeed{        
         @apply
         w-full
         p-2

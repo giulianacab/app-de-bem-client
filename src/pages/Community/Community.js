@@ -42,7 +42,7 @@ export function Community(){
         
 
             <div className="feeds">
-                <CreateFeed className="createNewFeedInsideFeed"/>
+                <CreateFeed className="communityFeed"/>
                 
                 {feeds.slice(0).reverse().map((current) => {
                     return (
