@@ -17,14 +17,14 @@ export function Settings(){
 
     return(
         <>
-            <Header where="SETTINGS" name={loggedInUser.user.name} />
+            <Header where="CONFIGURAÇÕES" name={loggedInUser.user.name} />
             
             <div className={style.container}>
             <Link to="/editprofile">
             <div className={`myProgress ${style.bttnhover}`}>
                 
                     <button>
-                       <h4 className="titleSuggCommunity">EDIT YOUR PROFILE</h4>
+                       <h4 className="titleSuggCommunity">EDITAR MINHA CONTA</h4>
                     </button>
             </div>
             </Link>

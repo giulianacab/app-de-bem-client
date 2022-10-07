@@ -2,7 +2,7 @@ import { useState } from "react";
 import { api } from "../../api/api";
 import { toast } from "react-hot-toast";
 
-export default function CreateComment (props) {
+export default function CreateComment(props) {
 
 
     const [form, setForm] = useState({
