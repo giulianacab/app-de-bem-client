@@ -36,25 +36,28 @@ export function Community(){
     return (
         <>
     
+        <header>
         <Header where="COMUNIDADES" name={loggedInUser.user.name} />
+        </header>
         
 
-        <div className="feeds" style={{marginBottom:"12rem"}}>
-            <CreateFeed />
-            {feeds.slice(0).reverse().map((current) => {
-                return (
-                    <>
-                    <CommunityFeed
-                        createdAt={current.createdAt}
-                        title={current.title}
-                        body={current.body}
-                        id={current._id}
-                        username={current.owner.username}
-                        reload={setReload} />
-                    </>
-                )
-            })}
-        </div>
+            <div className="feeds">
+                <CreateFeed className="createNewFeedInsideFeed"/>
+                
+                {feeds.slice(0).reverse().map((current) => {
+                    return (
+                        <>
+                        <CommunityFeed
+                            createdAt={current.createdAt}
+                            title={current.title}
+                            body={current.body}
+                            id={current._id}
+                            username={current.owner.username}
+                            reload={setReload} />
+                        </>
+                    )
+                })}
+            </div>
 
         
         <Menu />

@@ -153,9 +153,9 @@ const { loggedInUser } = useContext(AuthContext);
                     onChange={handleChange}
                     className="genderTxtFormEditProfile"
                   >
-                    <option className="genderOption" value="UNDEF">Indefinido</option>
-                    <option className="genderOption" value="USERFEM">Feminino</option>
-                    <option className="genderOption" value="USERNB">Não Binario</option>
+                    <option value="UNDEF">Indefinido</option>
+                    <option value="USERFEM">Feminino</option>
+                    <option value="USERNB">Não Binario</option>
                   </select>
 
                 </div>

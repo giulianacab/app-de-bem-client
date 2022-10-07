@@ -17,6 +17,7 @@ export function CommunityFeed(props){
                     <h3 className="bodyTxtCommunityFeed">{props.body}</h3>
                 </div>
             
+                {/* Comentar num post */}
                 <CreateComment feedId={props.id}/>
                 
             </div>

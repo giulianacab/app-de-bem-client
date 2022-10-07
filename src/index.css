@@ -397,10 +397,6 @@
         text-[#ffffff]
     }
 
-    .genderOption{
-
-    }
-
     .saveButtonEditProfile{
         @apply
         p-3
@@ -423,12 +419,23 @@
 
 
 /* POSTS DAS COMUNIDADES */
-    .communityFeed, .feeds{
+    .communityFeed{
         @apply
         flex
         flex-row
         w-full
         mt-36
+        -mb-16
+        justify-center
+        items-center
+    }
+
+    .createNewFeedInsideFeed{
+        @apply
+        flex
+        flex-col
+        w-4/5
+        mt-10
         -mb-16
         justify-center
         items-center
