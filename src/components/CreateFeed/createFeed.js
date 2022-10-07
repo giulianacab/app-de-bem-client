@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../../api/api";
-import style from "./createFeed.module.css"
+import style from "./CreateFeed.module.css"
 
-export default function AddForm () {
+export function CreateFeed () {
 
     const { idCommunity } = useParams();
 
     const [form, setForm] = useState({
         title: "",
-        message: "",
+        body: "",
      
     });
 
@@ -31,7 +31,7 @@ export default function AddForm () {
     return (
         
       <form onSubmit={handleSubmit}>
-      <div className="flex min-h-full items-center w-screen h-screen bg-white justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="communityFeed">
           <div className="w-full max-w-md space-y-3">
             
             
@@ -39,7 +39,7 @@ export default function AddForm () {
               <div className="-space-y-px rounded-md shadow-sm">
                 <div>
                   <label htmlFor="email-address" className="sr-only">
-                    titulo
+                    
                   </label>
                   <input
                     id="title"
@@ -54,15 +54,15 @@ export default function AddForm () {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="sr-only">
-                    message
+                  <label htmlFor="body" className="sr-only">
+                    
                   </label>
                   <input
-                    id="message"
-                    name="message"
-                    type="message"
-                    autoComplete="message"
-                    value={form.message}
+                    id="body"
+                    name="body"
+                    type="body"
+                    autoComplete="body"
+                    value={form.body}
                     required
                     className="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                     placeholder="Mensagem"

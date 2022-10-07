@@ -7,7 +7,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { api } from "../../api/api";
 import { useParams } from "react-router-dom";
-import CreateComment from "../../components/CreateComment/createComment";
+import { CreateFeed } from "../../components/CreateFeed/CreateFeed";
+
 
 
 export function Community(){
@@ -39,6 +40,7 @@ export function Community(){
         
 
         <div className="feeds" style={{marginBottom:"12rem"}}>
+            <CreateFeed />
             {feeds.slice(0).reverse().map((current) => {
                 return (
                     <>
