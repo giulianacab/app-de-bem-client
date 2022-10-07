@@ -20,8 +20,8 @@ export function Settings(){
             <Header where="CONFIGURAÇÕES" name={loggedInUser.user.name} />
             
             <div className={style.container}>
-            <Link to="/editprofile">
-            <div className={`myProgress ${style.bttnhover}`}>
+            <Link to="/editprofile" className={style.bttnhover}>
+            <div className="myProgress">
                 
                     <button>
                        <h4 className="titleSuggCommunity">EDITAR MINHA CONTA</h4>
