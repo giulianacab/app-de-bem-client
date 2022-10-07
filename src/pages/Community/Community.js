@@ -38,7 +38,7 @@ export function Community(){
         <Header where="COMUNIDADES" name={loggedInUser.user.name} />
         
 
-        <div className="feeds">
+        <div className="feeds" style={{marginBottom:"12rem"}}>
             {feeds.slice(0).reverse().map((current) => {
                 return (
                     <>

@@ -9,10 +9,10 @@ export function MoodToday(){
         try{
            
             await api.post("/moods", {mood: mood, color: color, bemzinha: bemzinha})
-            toast.success('Mood escolhido! Confira o histórico no My Moods')
+            toast.success('Mood escolhido com sucesso!')
         } catch(err) {
             console.log(err)
-            toast.error("Apenas um Mood por dia. Você pode excluir o Mood atual e escolher outro!")
+            toast.error("Apenas um Mood por dia")
         }
     }
     

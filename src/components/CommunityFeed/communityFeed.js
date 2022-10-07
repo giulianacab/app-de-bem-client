@@ -2,7 +2,7 @@ import CreateComment from "../CreateComment/createComment";
 
 export function CommunityFeed(props){
     return(
-        <div className="communityFeed">
+        <div className="communityFeed" >
 
             <div className="boxCommunityFeed">
                 <div className="dateCommunityFeed">
