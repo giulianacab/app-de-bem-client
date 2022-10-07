@@ -10,16 +10,18 @@ export default function CommunityCard(props){
         <center>
         <Link to={`/communities/${props.path}`} >
         <div className={`boxMoodFeed ${style.container} items-center w-27 h-30`} style={{backgroundColor:"#FFD110", width:"70%", height:"5rem"}}>
-                <div className="imgHumorMoodFeed" >
-                    <img src={props.img} className="benzinhaOfThisDay" alt="humorOfThisDay"></img>
+                
+            <div className="imgHumorMoodFeed" >
+                <img src={props.img} className="benzinhaOfThisDay" alt="humorOfThisDay"></img>
+            </div>
+
+            <div className="textsMoodFeed">
+                
+                <div className="nameHumorMoodFeed">
+                    <h4 className="nameTxtHumorMoodFeed" style={{color:"white"}}>{props.title}</h4>
                 </div>
-                <div className="textsMoodFeed">
-                    
-                    <div className="nameHumorMoodFeed">
-                        <h4 className="nameTxtHumorMoodFeed" style={{color:"white"}}>{props.title}</h4>
-                    </div>
-                    
-                </div>
+                
+            </div>
     
         </div>
         </Link>

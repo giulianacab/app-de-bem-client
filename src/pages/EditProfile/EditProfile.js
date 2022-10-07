@@ -2,47 +2,71 @@ import { Header } from "../../components/Header/Header";
 import { Menu } from "../../components/Menu/Menu";
 import { AuthContext } from "../../contexts/authContext";
 import { useContext } from "react";
-import {useParams} from "react-router-dom"
-import { useState } from "react"
-import axios from "axios"
+import { useState, useEffect  } from "react"
+import { api } from "../../api/api"
+
+import { useNavigate } from "react-router-dom";
 
 export function EditProfile(){
 
+const navigate = useNavigate()
 const { loggedInUser } = useContext(AuthContext);
-const { id } = useParams();
+const { setLoggedInUser } = useContext(AuthContext);
+
     const [form, setForm] = useState({
-        name: "",
-        username: "",
-        email: "",
-        role: "",
+        name: loggedInUser.user.name,
+        username: loggedInUser.user.username,
+        email: loggedInUser.user.email,
+        role: loggedInUser.user.role,
+        avatar:""
     });
     
+    const [img, setImg] = useState("");
 
-    function handleChange(e){
-        setForm({...form, [e.target.name]: e.target.value})
+    function handleChange(e) {
+      setForm({ ...form, [e.target.name]: e.target.value });
+      console.log(form)
+    }
+
+    function handleImage(e) {
+      setImg(e.target.files[0]);
+    }
+
+    async function handleUpload() {
+      try {
+        const uploadData = new FormData();
+        uploadData.append("picture", img);
+        console.log(uploadData)
+  
+        const response = await api.post("/upload/uploadImage", uploadData);
+  
+        return response.data.url;
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     async function handleSubmit(e) {
-        e.preventDefault();
-        try {
-          const response = await axios.put(
-            `/editprofile`,
-            form
-          );
-    
-          
-          
-    
-          console.log(response);
-        } catch (err) {
-          console.log(err);
-        }
+      e.preventDefault();
+  
+      try {
+        const imgURL = await handleUpload();
+        console.log(imgURL);
+        await api.put(`/users/${loggedInUser.user._id}/edit`, { ...form, avatar: imgURL });
+        
+  
+        navigate("/login");
+      } catch (error) {
+        console.log(error);
       }
+    }
+
+
     
     return (
         <>
         <Header where="EDITAR PERFIL" name={loggedInUser.user.name} />
-        <div className="EditProfileForm">
+        <div className="EditProfileForm" >
 
         <div className="mt-10 sm:mt-0">
         <div className="md:grid md:grid-cols-3 md:gap-6">
@@ -53,7 +77,7 @@ const { id } = useParams();
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <form  onSubmit={handleSubmit}>
+            <form  onSubmit={handleSubmit} >
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-pink px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
@@ -66,7 +90,7 @@ const { id } = useParams();
                         type="text"
                         name="name"
                         id="name"
-                        autoComplete="name"
+                        // autoComplete="name"
                         required
                         value={form.name}
                         onChange={handleChange}
@@ -108,7 +132,7 @@ const { id } = useParams();
                     </div>
                     <div className="col-span-6 sm:col-span-3">
                       <label htmlFor="role" className="block text-sm font-medium text-gray-700">
-                        Genero
+                        Gênero
                       </label>
                       <select
                         id="role"
@@ -119,28 +143,15 @@ const { id } = useParams();
                         onChange={handleChange}
                         className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                       >
+                        <option value="UNDEF">Indefinido</option>
                         <option value="USERFEM">Feminino</option>
                         <option value="USERNB">Não Binario</option>
                         
                       </select>
                     </div>
-                    <div>
-                    <label className="block text-sm font-medium text-gray-700">Avatar</label>
-                    <div className="mt-1 flex items-center">
-                      <span className="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
-                        <svg className="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                      </span>
-                      <button
-                        type="button"
-                       
-                        className=" rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                      >
-                        Alterar
-                      </button>
-                    </div>
-                  </div>
+                    
+                  <label htmlFor="formImg">Sua foto de perfil:</label>
+                  <input  type="file" id="formImg" onChange={handleImage} style={{width:"6rem"}} />
 
                   </div>
                 </div>
@@ -149,9 +160,10 @@ const { id } = useParams();
                     type="submit"
                     className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-orange shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >
-                    Save
+                    Salvar
                   </button>
                 </div>
+                
               </div>
             </form>
           </div>
