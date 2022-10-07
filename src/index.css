@@ -329,8 +329,6 @@
     .editInfos{
         @apply
         my-40
-       
-       
         flex
         flex-col
         justify-start
@@ -347,10 +345,106 @@
 
 
 
+/* POSTS DAS COMUNIDADES */
+    .communityFeed{
+        @apply
+        flex
+        flex-col
+        w-full
+        h-screen
+        -mb-28
+        justify-center
+        items-center
+    }
+
+    .boxCommunityFeed{
+        @apply
+        w-4/5
+        p-6
+        bg-[#ffffff]
+        rounded-2xl
+        shadow-md
+        shadow-[#dadada]
+    }
+
+    .dateCommunityFeed{
+        @apply
+        text-xs
+        mb-3
+    }
+
+    .dateTxtCommunityFeed{}
+
+    .titleCommunityFeed{
+        @apply
+        mb-3
+    }
+
+    .titleTxtCommunityFeed{
+        @apply
+        font-bold
+        text-purple
+        text-2xl
+    }
+
+    .bodyCommunityFeed{}
+
+    .bodyTxtCommunityFeed{}
+
+    .commentCommunityFeed{}
+
+    .boxCommunityFeed{
+        @apply
+        w-4/5
+        p-6
+        m-0
+        bg-[#ffffff]
+        rounded-2xl
+        shadow-md
+        shadow-[#dadada]
+    }
+
+    .commentBox{
+        @apply
+        w-full
+        mt-5
+        bg-[#dadada]
+        rounded-2xl
+        shadow-md
+        shadow-[#dadada]
+    }
+
+    .commentText{
+        @apply
+        w-full
+        p-6
+        rounded-2xl
+    }
+
+    .commentButton{        
+        @apply
+        w-full
+        p-2
+        mt-5
+        bg-pink
+        rounded-2xl
+        font-bold
+        text-[#ffffff]
+    }
+
+
+
+
+
+
+
+
+
+
 /* MENU / FOOTER */
     .footer{
         @apply
-        bg-[pink]
+        bg-pink
         h-20
         w-full
         flex
