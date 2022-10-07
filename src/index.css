@@ -241,6 +241,13 @@
         bg-[#FF94AE]
     }
 
+    .logoimg{
+        @apply
+        
+        w-48
+
+        
+    }
 
 
 /* MY MOODS PAGE */
