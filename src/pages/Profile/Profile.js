@@ -30,25 +30,31 @@ export function Profile() {
      <Header where="MEU PERFIL" name={loggedInUser.user.name} />
 
     {/* EDIT INFOS */}
-    <div className="editInfos bg-pink px-4 py-5 sm:p-6">
+    <div className="editInfos bg-white  px-4 py-5 sm:p-6">
 
-      <div className="editName ">
+      <div className="editName inline-flex mb-2 justify-center rounded-md bg-[#ffd5e0] text-lg border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-orange shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ">
         <h4 className="yourName font-bold ">Seu nome: </h4>
-        <p>{loggedInUser.user.name}</p>
+        <p> {loggedInUser.user.name}</p>
+        
+      </div>
+      
+      <div className="editUsername inline-flex justify-center mb-2 text-lg rounded-md bg-[#ffd5e0] border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-orange shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ">
+        <h4 className="yourUsername font-bold">Seu username:</h4>
+        <p>{loggedInUser.user.username}</p>
+        
       </div>
 
-      <div className="editUsername">
-        <h4 className="yourUsername">Seu username: {loggedInUser.user.username}</h4>
+      <div className="editEmail inline-flex justify-center text-lg mb-2 rounded-md border bg-[#ffd5e0] border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-orange shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+        <h4 className="yourEmail font-bold">Seu e-mail: </h4>
+        <p> {loggedInUser.user.email}</p>
+        
       </div>
 
-      <div className="editEmail">
-        <h4 className="yourEmail">Seu e-mail: {loggedInUser.user.email}</h4>
-      </div>
-
-      <div className="editPassword">
-      </div>
-      <div className="gender">
-      <h4>Seu Genero: {loggedInUser.user.gender} </h4>
+      
+      <div className="gender font-bold text-lg inline-flex justify-center mb-2 rounded-md border bg-[#ffd5e0] border-transparent bg-indigo-600 py-2 px-4 text-sm  text-orange shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+      <h4>Sua Identidade de Genero:   </h4>
+      <p>{loggedInUser.user.gender}</p>
+      
       </div>
 
     </div>

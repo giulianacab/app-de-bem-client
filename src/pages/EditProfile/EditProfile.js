@@ -5,14 +5,14 @@ import { useContext } from "react";
 import { useParams } from "react-router-dom"
 import { useState, useEffect  } from "react"
 import { api } from "../../api/api"
-import axios from "axios"
+
 import { useNavigate } from "react-router-dom";
 
 export function EditProfile(){
 
 const navigate = useNavigate()
 const { loggedInUser } = useContext(AuthContext);
-const { id } = useParams();
+
     const [form, setForm] = useState({
         name: "",
         username: "",
@@ -22,35 +22,20 @@ const { id } = useParams();
     
     const [img, setImg] = useState("");
 
-    useEffect(() => {
-      async function fetchUser() {
-        try {
-          const response = await axios.get(
-            "/"
-          );
-          delete response.data._id
-          setForm({ ...response.data });
-        } catch (err) {
-          console.log(err);
-        }
-      }
-      fetchUser();
-    }, []);
-
     function handleChange(e) {
       setForm({ ...form, [e.target.name]: e.target.value });
     }
-  
+
     function handleImage(e) {
       setImg(e.target.files[0]);
     }
-  
+
     async function handleUpload() {
       try {
         const uploadData = new FormData();
-        uploadData.append("picture", img);
+        uploadData.append("pictures", img);
   
-        const response = await api.post("/uploadImage", uploadData);
+        const response = await api.put("/uploadImage", uploadData);
   
         return response.data.url;
       } catch (error) {
@@ -63,7 +48,7 @@ const { id } = useParams();
   
       try {
         const imgURL = await handleUpload();
-        await api.post("/editprofile", { ...form, img: imgURL });
+        await api.put("/editprofile", { ...form, img: imgURL });
   
         navigate("/");
       } catch (error) {
@@ -159,8 +144,8 @@ const { id } = useParams();
                       </select>
                     </div>
                     
-                  <label htmlFor="formImg">Sua foto de perfil:</label>
-                  <input  type="file" className=" " id="formImg" onChange={handleImage} />
+                  {/* <label htmlFor="formImg">Sua foto de perfil:</label>
+                  <input  type="file" className=" " id="formImg" onChange={handleImage} /> */}
 
                   </div>
                 </div>
