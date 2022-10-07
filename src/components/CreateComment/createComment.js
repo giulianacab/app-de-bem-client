@@ -1,17 +1,12 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import { api } from "../../api/api";
+import { toast } from "react-hot-toast";
 
+export default function CreateComment (props) {
 
-
-export default function CreateComment () {
-
-    const { idCommunity } = useParams();
 
     const [form, setForm] = useState({
-        title: "",
-        message: "",
-     
+        body: ""
     });
 
     function handleChange(e){
@@ -22,7 +17,9 @@ export default function CreateComment () {
         e.preventDefault();
     
         try {
-          const response = await api.post(`/feeds/${idCommunity}`, form);
+          const response = await api.post(`/comments/${props.feedId}`, form);
+          setForm({body:""});
+          toast.success('Comentário enviado!')
         } catch (err) {
           console.log(err);
         }
@@ -38,10 +35,10 @@ export default function CreateComment () {
 
           <div className="commentBox">
               <input
-                id="message"
-                name="message"
-                type="message"
-                value={form.message}
+                id="body"
+                name="body"
+                type="text"
+                value={form.body}
                 className="commentText"
                 placeholder="Escreva aqui..."
                 onChange={handleChange}
