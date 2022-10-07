@@ -7,14 +7,12 @@
 
 .settingsBtn:hover{
     cursor: pointer;
-
     transition: transform 150ms;
     transform: scale(1.08);
 }
 
 .profilePic:hover{
     cursor: pointer;
-
     transition: transform 150ms;
     transform: scale(1.04);
 }
