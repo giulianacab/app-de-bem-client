@@ -1,3 +1,5 @@
+import { Menu } from "../../components/Menu/Menu";
+
 export function ErrorPage() {
   return (
     
@@ -32,6 +34,8 @@ export function ErrorPage() {
       
     </div>
   </div>
+    
+  <Menu/>
 </div>
   );
 }
