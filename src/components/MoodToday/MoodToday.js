@@ -9,10 +9,10 @@ export function MoodToday(){
         try{
            
             await api.post("/moods", {mood: mood, color: color, bemzinha: bemzinha})
-            toast.success('Mood escolhido! Confira o histórico no My Moods')
+            toast.success('Mood escolhido com sucesso!')
         } catch(err) {
             console.log(err)
-            toast.error("Apenas um Mood por dia. Você pode excluir o Mood atual e escolher outro!")
+            toast.error("Apenas um Mood por dia")
         }
     }
     
@@ -28,7 +28,7 @@ export function MoodToday(){
             <img src="https://svgshare.com/i/n9i.svg" className={`benzinha2 ${style.icon}`} alt="apática"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>apático</span></center>
           </button>
-          <button onClick={()=>{handleMood("de bem","#23E2AF","https://images2.imgbox.com/54/1f/hdwOJPTU_o.png")}}>
+          <button onClick={()=>{handleMood("de bem","#23E2AF","https://svgshare.com/i/nDJ.svg")}}>
             <img src="https://svgshare.com/i/n86.svg" className={`benzinha3 ${style.icon}`} alt="de bem"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>de bem</span></center>
           </button>
