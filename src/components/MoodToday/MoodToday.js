@@ -25,7 +25,7 @@ export function MoodToday(props){
             <img src="https://svgshare.com/i/n9W.svg" className={`benzinha1 ${style.icon}`} alt="triste"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>triste</span></center>
           </button>
-          <button onClick={()=>{handleMood("apatico","pink","https://svgshare.com/i/nB0.svg")}}>
+          <button onClick={()=>{handleMood("apatico","#FF94AE","https://svgshare.com/i/nB0.svg")}}>
             <img src="https://svgshare.com/i/n9i.svg" className={`benzinha2 ${style.icon}`} alt="apática"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>apático</span></center>
           </button>
@@ -33,7 +33,7 @@ export function MoodToday(props){
             <img src="https://svgshare.com/i/n86.svg" className={`benzinha3 ${style.icon}`} alt="de bem"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>de bem</span></center>
           </button>
-          <button onClick={()=>{handleMood("ansioso","#FF94AE","https://svgshare.com/i/nD6.svg")}}>
+          <button onClick={()=>{handleMood("ansioso","#FFD110","https://svgshare.com/i/nD6.svg")}}>
             <img src="https://svgshare.com/i/n7M.svg" className={`benzinha4 ${style.icon}`} alt="ansiosa"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>ansioso</span></center>
           </button>

@@ -41,8 +41,8 @@ export function Community(){
         </header>
         
 
-            <div className="feeds">
-                <CreateFeed className="communityFeed"/>
+            <div className="feeds" style={{marginBottom:"16rem"}}>
+                <CreateFeed className="communityFeed" reload={setReload}/>
                 
                 {feeds.slice(0).reverse().map((current) => {
                     return (

@@ -1,9 +1,10 @@
+import { PropaneSharp } from "@mui/icons-material";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../../api/api";
 import style from "./CreateFeed.module.css"
 
-export function CreateFeed() {
+export function CreateFeed(props) {
 
     const { idCommunity } = useParams();
 
@@ -22,6 +23,11 @@ export function CreateFeed() {
     
         try {
           const response = await api.post(`/feeds/${idCommunity}`, form);
+          setForm({
+            title: "",
+            body: "",
+          })
+          props.reload(true);
         } catch (err) {
           console.log(err);
         }

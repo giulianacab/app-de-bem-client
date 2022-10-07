@@ -50,9 +50,9 @@ export function Home() {
 
       <MoodToday reload={setReload}/>
     
-
-     <MyProgress dias={diasDeBem} />
-
+      <Link to="/mymoods">
+        <MyProgress dias={diasDeBem} />
+      </Link>
    
       <Menu />
     </>
