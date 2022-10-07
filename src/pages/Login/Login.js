@@ -35,15 +35,18 @@ export function Login() {
   }
 
   return (
-   
+    <>
     <form onSubmit={handleSubmit}>
+    
     <div className="flex min-h-full bg-orange items-center w-screen h-screen justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8">
-          <div>
-  
+          <div className=" flex flex-col justify-center items-center">
+          
+          <img className="logoimg" src="https://res.cloudinary.com/dmk9xlm2w/image/upload/v1665158076/logo_laranja_poj4im.png" alt="logo" />
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900" style={{color:"white"}}>
               Faça seu login
             </h2>
+            
             <p className="mt-2 text-center text-sm text-gray-600" style={{color:"white"}}>
               É novo aqui?{' '}
               <Link to="/signup">
@@ -107,5 +110,6 @@ export function Login() {
         
       </div>
       </form>
+      </>
   );
 }
