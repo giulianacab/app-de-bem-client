@@ -1,12 +1,9 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import { api } from "../../api/api";
-
-
+import { toast } from "react-hot-toast";
 
 export default function CreateComment (props) {
 
-    const { idCommunity } = useParams();
 
     const [form, setForm] = useState({
         body: ""
@@ -22,6 +19,7 @@ export default function CreateComment (props) {
         try {
           const response = await api.post(`/comments/${props.feedId}`, form);
           setForm({body:""});
+          toast.success('Comentário enviado!')
         } catch (err) {
           console.log(err);
         }
