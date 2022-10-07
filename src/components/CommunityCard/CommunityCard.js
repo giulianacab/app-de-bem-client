@@ -12,7 +12,7 @@ export default function CommunityCard(props){
         <div className={`boxMoodFeed ${style.container} items-center w-27 h-30`} style={{backgroundColor:"#FF94AE", width:"70%", height:"5rem"}}>
                 
             <div className="imgHumorMoodFeed" >
-                <img src={props.img} className="benzinhaOfThisDay" alt="humorOfThisDay"></img>
+                <img src={props.img} className={`benzinhaOfThisDay ${style.img}`} alt="humorOfThisDay"></img>
             </div>
 
             <div className="textsMoodFeed">
