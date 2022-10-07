@@ -1,8 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import {Header} from "../../components/Header/Header"
-import axios from "axios";
-import CreateFeed from "../../components/CreateFeed/createFeed";
-
 import { AuthContext } from "../../contexts/authContext";
 import { api } from "../../api/api";
 import { Menu } from "../../components/Menu/Menu";
