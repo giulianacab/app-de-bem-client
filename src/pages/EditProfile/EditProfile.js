@@ -2,7 +2,7 @@ import { Header } from "../../components/Header/Header";
 import { Menu } from "../../components/Menu/Menu";
 import { AuthContext } from "../../contexts/authContext";
 import { useContext } from "react";
-import { useState, useEffect  } from "react"
+import { useState  } from "react"
 import { api } from "../../api/api"
 
 import { useNavigate } from "react-router-dom";
@@ -11,14 +11,13 @@ export function EditProfile(){
 
 const navigate = useNavigate()
 const { loggedInUser } = useContext(AuthContext);
-const { setLoggedInUser } = useContext(AuthContext);
+
 
     const [form, setForm] = useState({
         name: loggedInUser.user.name,
         username: loggedInUser.user.username,
         email: loggedInUser.user.email,
-        role: loggedInUser.user.role,
-        avatar:""
+        role: loggedInUser.user.role
     });
     
     const [img, setImg] = useState("");
