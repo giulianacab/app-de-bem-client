@@ -69,7 +69,7 @@ const { loggedInUser } = useContext(AuthContext);
         <div className="editProfileForm" >
 
             <div className="titleEditProfile">
-              <h3 className="titleTxtEditProfile">📝 Edite seu perfil</h3>
+              <h3 className="titleTxtEditProfile">✏ Edite seu perfil</h3>
             </div>
 
             <div className="formEditProfile">

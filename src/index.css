@@ -459,6 +459,7 @@
         items-center
         p-6
         bg-[#ffffff]
+        rounded-2xl
         shadow-md
         shadow-[#dadada]
     }
