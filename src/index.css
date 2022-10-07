@@ -37,7 +37,7 @@
 
     .titleHome{
         @apply
-        font-sans
+        font-normal
         text-[#ffffff]
         text-3xl
         
@@ -89,7 +89,7 @@
 
     .titleHeaderPages{
         @apply
-        font-sans
+        font-normal
         text-[#ffffff]
         text-xs
         
@@ -97,11 +97,9 @@
 
     .nameHeaderPages{
         @apply
-        font-sans
+        font-bold
         text-[#ffffff]
         text-2xl
-        font-bold
-        
     }
 
     .configIcon{
@@ -127,8 +125,8 @@
 
     .titleMoodToday{
         @apply
-        font-sans
-        text-[#000000]
+        font-bold
+        text-[#5c5c5c]
         text-xl
 
         py-8
@@ -210,7 +208,7 @@
 
     .titleMyProgress, .titleSuggCommunity{
         @apply
-        font-sans
+        font-normal
         text-white
         text-base
 
@@ -316,6 +314,12 @@
         text-sm
     }
 
+    .trashIcon{
+        @apply
+        w-5
+        fill-white
+        
+    }
 
 
 
@@ -323,8 +327,6 @@
     .editInfos{
         @apply
         my-40
-       
-       
         flex
         flex-col
         justify-start
@@ -341,10 +343,106 @@
 
 
 
+/* POSTS DAS COMUNIDADES */
+    .communityFeed{
+        @apply
+        flex
+        flex-row
+        w-full
+        mt-36
+        -mb-16
+        justify-center
+        items-center
+    }
+
+    .boxCommunityFeed{
+        @apply
+        w-4/5
+        p-6
+        bg-[#ffffff]
+        rounded-2xl
+        shadow-md
+        shadow-[#dadada]
+    }
+
+    .dateCommunityFeed{
+        @apply
+        text-xs
+        mb-3
+    }
+
+    .dateTxtCommunityFeed{}
+
+    .titleCommunityFeed{
+        @apply
+        mb-3
+    }
+
+    .titleTxtCommunityFeed{
+        @apply
+        font-bold
+        text-purple
+        text-2xl
+    }
+
+    .bodyCommunityFeed{}
+
+    .bodyTxtCommunityFeed{}
+
+    .commentCommunityFeed{}
+
+    .boxCommunityFeed{
+        @apply
+        w-4/5
+        p-6
+        m-0
+        bg-[#ffffff]
+        rounded-2xl
+        shadow-md
+        shadow-[#dadada]
+    }
+
+    .commentBox{
+        @apply
+        w-full
+        mt-5
+        bg-[#dadada]
+        rounded-2xl
+        shadow-md
+        shadow-[#dadada]
+    }
+
+    .commentText{
+        @apply
+        w-full
+        p-6
+        rounded-2xl
+    }
+
+    .commentButton{        
+        @apply
+        w-full
+        p-2
+        mt-5
+        bg-pink
+        rounded-2xl
+        font-bold
+        text-[#ffffff]
+    }
+
+
+
+
+
+
+
+
+
+
 /* MENU / FOOTER */
     .footer{
         @apply
-        bg-[pink]
+        bg-pink
         h-20
         w-full
         flex
@@ -360,13 +458,6 @@
         @apply
         w-7
         fill-white
-
-    }
-    .trashIcon{
-        @apply
-        w-5
-        fill-white
-        
     }
 }
 
