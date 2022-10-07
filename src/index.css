@@ -168,6 +168,25 @@
         m-10
     }
 
+    .myProgressBem{
+        @apply
+        bg-[#1dbe93]
+        flex
+        flex-row
+
+        items-center
+        w-4/5
+        h-40
+        box-border
+
+        rounded-xl
+        border-solid
+        border-[pink]
+        border
+
+        m-10
+    }
+
     .suggestionCommunity{
         @apply
         bg-[#A706CE]
