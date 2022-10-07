@@ -47,6 +47,7 @@ export function Community(){
                         title={current.title}
                         body={current.body}
                         id={current._id}
+                        username={current.owner.username}
                         reload={setReload} />
                     </>
                 )

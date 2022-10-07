@@ -6,7 +6,7 @@ export function CommunityFeed(props){
 
             <div className="boxCommunityFeed">
                 <div className="dateCommunityFeed">
-                    <h6 className="dateTxtCommunityFeed">{props.createdAt.slice(0,10)} às {props.createdAt.slice(11,16)}</h6>
+                    <h6 className="dateTxtCommunityFeed">{props.createdAt.slice(0,10)} às {props.createdAt.slice(11,16)} - by {props.username}</h6>
                 </div>
 
                 <div className="titleCommunityFeed">
