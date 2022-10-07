@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 export function EditProfile(){
 
 const navigate = useNavigate()
-const { loggedInUser } = useContext(AuthContext);
+const { loggedInUser, setLoggedInUser } = useContext(AuthContext);
 
 
     const [form, setForm] = useState({
@@ -50,11 +50,20 @@ const { loggedInUser } = useContext(AuthContext);
   
       try {
         const imgURL = await handleUpload();
-        console.log(imgURL);
+        console.log(loggedInUser);
         await api.put(`/users/${loggedInUser.user._id}/edit`, { ...form, avatar: imgURL });
-        
+        const user = await api.get(`/users/${loggedInUser.user._id}`);
+        console.log(user);
+        setLoggedInUser({...loggedInUser, user:{...loggedInUser.user, 
+          name: user.data.name, 
+          avatar:user.data.avatar,
+          username: user.data.username,
+          role: user.data.role,
+          email: user.data.email
+        }})
+        console.log(loggedInUser);
   
-        navigate("/login");
+        navigate("/");
       } catch (error) {
         console.log(error);
       }
