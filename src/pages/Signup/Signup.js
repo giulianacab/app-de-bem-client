@@ -2,7 +2,8 @@ import { useState } from "react";
 import { api } from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import style from "./Signup.module.css"
+import style from "./Signup.module.css";
+import { toast } from "react-hot-toast";
 
 export function Signup() {
   const navigate = useNavigate();
@@ -46,6 +47,7 @@ export function Signup() {
       navigate("/login");
     } catch (error) {
       console.log(error);
+      toast.error("Senha deve ter no min. 8 caracteres, incluindo letras maiúsculas e minúsculas, números e caracteres especiais.");
     }
   }
 
