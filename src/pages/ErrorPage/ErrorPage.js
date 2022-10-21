@@ -8,7 +8,7 @@ export function ErrorPage() {
     <div className="lg:gap-4 lg:flex flex-col justify-center items-center">
     <div className="flex justify-center items-center w-44 h-15 ml-12 mt-4">
         <img
-          src="https://svgshare.com/i/n9v.svg"
+          src="https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666371676/Benzinha_deitada_com_meias_pcyipr.png"
           alt="img"
           // className="flex justify-center items-center w-40 h-40"
         />
