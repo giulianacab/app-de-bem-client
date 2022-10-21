@@ -21,24 +21,24 @@ export function MoodToday(props){
     <div className="moodToday">
         <h3 className="titleMoodToday">Como está seu humor hoje?</h3>
         <div className="chooseMood mt-6 text-center" style={{marginTop:"0"}}>
-          <button onClick={()=>{handleMood("triste","#A706CE","https://svgshare.com/i/nEZ.svg")}}>
-            <img src="https://svgshare.com/i/n9W.svg" className={`benzinha1 ${style.icon}`} alt="triste"></img>
+          <button onClick={()=>{handleMood("triste","#A706CE","https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666364491/6_bqxhh8.png")}}>
+            <img src="https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666364491/6_bqxhh8.png" className={`benzinha1 ${style.icon}`} alt="triste"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>triste</span></center>
           </button>
-          <button onClick={()=>{handleMood("apatico","#FF94AE","https://svgshare.com/i/nB0.svg")}}>
-            <img src="https://svgshare.com/i/n9i.svg" className={`benzinha2 ${style.icon}`} alt="apática"></img>
+          <button onClick={()=>{handleMood("apatico","#FF94AE","https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666364508/5_dssqyt.png")}}>
+            <img src="https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666364508/5_dssqyt.png" className={`benzinha2 ${style.icon}`} alt="apática"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>apático</span></center>
           </button>
-          <button onClick={()=>{handleMood("de bem","#23E2AF","https://svgshare.com/i/nDJ.svg")}}>
-            <img src="https://svgshare.com/i/n86.svg" className={`benzinha3 ${style.icon}`} alt="de bem"></img>
+          <button onClick={()=>{handleMood("de bem","#23E2AF","https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666364495/4_scogen.png")}}>
+            <img src="https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666364495/4_scogen.png" className={`benzinha3 ${style.icon}`} alt="de bem"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>de bem</span></center>
           </button>
-          <button onClick={()=>{handleMood("ansioso","#FFD110","https://svgshare.com/i/nD6.svg")}}>
-            <img src="https://svgshare.com/i/n7M.svg" className={`benzinha4 ${style.icon}`} alt="ansiosa"></img>
+          <button onClick={()=>{handleMood("ansioso","#FFD110","https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666364504/3_xew9yh.png")}}>
+            <img src="https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666364504/3_xew9yh.png" className={`benzinha4 ${style.icon}`} alt="ansiosa"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>ansioso</span></center>
           </button>
-          <button onClick={()=>{handleMood("com raiva","#FF6648","https://svgshare.com/i/nDg.svg")}}>
-            <img src="https://svgshare.com/i/n8e.svg" className={`benzinha5 ${style.icon}`} alt="cara de raiva"></img>
+          <button onClick={()=>{handleMood("com raiva","#FF6648","https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666364486/1_vdpgfh.png")}}>
+            <img src="https://res.cloudinary.com/dmk9xlm2w/image/upload/v1666364486/1_vdpgfh.png" className={`benzinha5 ${style.icon}`} alt="cara de raiva"></img>
             <center><span style={{fontSize: "0.7rem", color:"rgb(188, 183, 183)"}}>com raiva</span></center>
           </button>
           
